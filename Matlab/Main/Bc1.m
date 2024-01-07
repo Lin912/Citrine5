@@ -10,4 +10,4 @@ f(4) = Omega2;
 f(5) = Omega3;
 
 
-jacobian(f,[u,v,w,T,Sn,Sb,Theta,Phi,Omega2,Omega3])
+jac = jacobian(f,[u,v,w,T,Sn,Sb,Theta,Phi,Omega2,Omega3])

@@ -48,6 +48,13 @@ class Jacobian
         double deltaT;
         double deltaS;
 
+        double Gx;
+        double Gy;
+        double Gz;
+        double Ax;
+        double Ay;
+        double Az;
+
         int k;
 
     public:
