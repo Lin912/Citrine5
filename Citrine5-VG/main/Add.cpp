@@ -1,0 +1,137 @@
+#include "Add.h"
+
+Add::Add(VectorXd &arr, VectorXd &brr, int index)
+{
+    Yold = arr;
+    Ynew = brr;
+
+    k = index;
+
+    FiberRO a;
+    A = a.ReadPhysical()[0];
+    rho = a.ReadPhysical()[1];
+    d0 = a.ReadPhysical()[2];
+    E = a.ReadPhysical()[3];
+    I = a.ReadPhysical()[4];
+    M = a.ReadPhysical()[5];
+    ma = a.ReadPhysical()[6];
+    w0 = a.ReadPhysical()[7];
+    Cdt = a.ReadPhysical()[8];
+    Cdn = a.ReadPhysical()[9];
+    Cdb = a.ReadPhysical()[10];
+    
+    pi = a.ReadPhysical()[11];
+    g = a.ReadPhysical().back();
+
+    V1 = a.ReadWater(index)[0];
+    V2 = a.ReadWater(index)[1];
+    V3 = a.ReadWater(index)[2];
+
+    Vt1 = a.ReadTopVel(index)[0];
+    Vt2 = a.ReadTopVel(index)[1];
+    Vt3 = a.ReadTopVel(index)[2];
+
+    Vb1 = a.ReadBottomVel()[0];
+    Vb2 = a.ReadBottomVel()[1];
+    Vb3 = a.ReadBottomVel()[2];
+
+    deltaT = a.ReadDelta()[0];
+    deltaS = a.ReadDelta()[1];
+}
+
+Add::~Add()
+{
+
+}
+
+
+VectorXd Add::Addyold()
+{
+    VectorXd temp(500);
+
+    VectorXd point00(3);
+    point00(0) = Vt1*cos(Yold(7))*cos(Yold(6)) + Vt2*sin(Yold(6))*cos(Yold(7)) - Vt3*sin(Yold(7));          //速度u边界条件（上）
+    point00(1) = Vt2*cos(Yold(6)) - Vt1*sin(Yold(6));          //速度V边界条件
+    point00(2) = Vt1*sin(Yold(7))*cos(Yold(6)) + Vt2*sin(Yold(7))*sin(Yold(6)) + Vt3*cos(Yold(7));            //速度w边界条件
+
+    VectorXd point01(2);
+    point01(0) = 0;              //O2mega边界条件（上）
+    point01(1) = 0;              //O3mega边界条件
+
+    VectorXd point02(3);
+    point02(0) = Vb1*cos(Yold(497))*cos(Yold(496)) + Vb2*sin(Yold(496))*cos(Yold(497)) - Vb3*sin(Yold(497));          //速度T边界条件（下）
+    point02(1) = Vb2*cos(Yold(496)) - Vb1*sin(Yold(496));          //速度Sn边界条件
+    point02(2) = Vb1*sin(Yold(497))*cos(Yold(496)) + Vb2*sin(Yold(497))*sin(Yold(496)) + Vb3*cos(Yold(497));             //速度Sb边界条件
+
+
+    // VectorXd point02(3);
+    // point02(0) = G*cos(Yold(497))*cos(Yold(496));          //速度T边界条件（下）
+    // point02(1) = -G*sin(Yold(496)) - 0.5*rho*Cdn*Sd*Yold(491)*sqrt(pow(Yold(491),2)+pow(Yold(492),2));          //速度Sn边界条件
+    // point02(2) = G*cos(Yold(496))*sin(Yold(497)) - 0.5*rho*Cdn*Sd*Yold(492)*sqrt(pow(Yold(491),2)+pow(Yold(492),2));             //速度Sb边界条件
+
+    VectorXd point03(2);
+    point03(0) = 0;              //O2mega边界条件（下）
+    point03(1) = 0;              //O3mega边界条件
+
+    temp.segment(0,3) = point00;
+    temp.segment(3,5) = Yold.segment(3, 5);
+    temp.segment(8,2) = point01;
+
+
+    temp.segment(10, 480) = Yold.segment(10, 480);
+
+    temp.segment(490, 3) = point02;
+    temp.segment(493, 3) = Yold.segment(493, 3);
+    // temp.segment(490, 3) = Yold.segment(490, 3);
+    // temp.segment(493, 3) = point02;
+    temp.segment(496, 2) = Yold.segment(496, 2);
+    temp.tail(2) = point03;
+
+    return temp;
+}
+
+VectorXd Add::Addynew()
+{
+    VectorXd temp(500);
+
+    VectorXd point00(3);
+    point00(0) = Vt1*cos(Ynew(7))*cos(Ynew(6)) + Vt2*sin(Ynew(6))*cos(Ynew(7)) - Vt3*sin(Ynew(7));            //速度u边界条件（上）
+    point00(1) = Vt2*cos(Ynew(6)) - Vt1*sin(Ynew(6));            //速度V边界条件
+    point00(2) = Vt1*sin(Ynew(7))*cos(Ynew(6)) + Vt2*sin(Ynew(7))*sin(Ynew(6)) + Vt3*cos(Ynew(7));              //速度w边界条件
+
+    VectorXd point01(2);
+    point01(0) = 0;              //O2mega边界条件（上）
+    point01(1) = 0;              //O3mega边界条件
+
+    VectorXd point02(3);
+    point02(0) = Vb1*cos(Ynew(497))*cos(Ynew(496)) + Vb2*sin(Ynew(496))*cos(Ynew(497)) - Vb3*sin(Ynew(497));           
+    point02(1) = Vb2*cos(Ynew(496)) - Vb1*sin(Ynew(496));
+    point02(2) = Vb1*sin(Ynew(497))*cos(Ynew(496)) + Vb2*sin(Ynew(497))*sin(Ynew(496)) + Vb3*cos(Ynew(497));
+
+    // VectorXd point02(3);
+    // point02(0) = G*cos(Ynew(497))*cos(Ynew(496));            //速度T边界条件（下）
+    // point02(1) = -G*sin(Ynew(496)) - 0.5*rho*Cdn*Sd*Ynew(491)*sqrt(pow(Ynew(491),2)+pow(Ynew(492),2));         //速度Sn边界条件
+    // point02(2) = G*cos(Ynew(496))*sin(Ynew(497))- 0.5*rho*Cdn*Sd*Ynew(492)*sqrt(pow(Ynew(491),2)+pow(Ynew(492),2));           //速度Sb边界条件
+
+
+    VectorXd point03(2);
+    point03(0) = 0;              //O2mega边界条件（下）
+    point03(1) = 0;              //O3mega边界条件
+
+    temp.segment(0,3) = point00;
+    temp.segment(3,5) = Ynew.segment(3, 5);
+    temp.segment(8,2) = point01;
+
+
+    temp.segment(10, 480) = Ynew.segment(10, 480);
+    temp.segment(490, 3) = point02;
+    temp.segment(493, 3) = Ynew.segment(493, 3);
+    // temp.segment(490, 3) = Ynew.segment(490, 3);
+    // temp.segment(493, 3) = point02;
+    temp.segment(496, 2) = Ynew.segment(496, 2);
+    temp.tail(2) = point03;
+
+
+    return temp;
+
+}
