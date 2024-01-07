@@ -73,8 +73,8 @@ VectorXd Add::Addyold()
 
     VectorXd point02(3);
     point02(0) =  Gx*cos(Yold(496))*cos(Yold(497)) - Gy*sin(Yold(497))*cos(Yold(496)) - Gz*sin(Yold(496));
-    point02(1) =  Gy*cos(Yold(497)) + Gx*sin(Yold(497)) - 0.5*rho*Cdn*Ay*Yold(491)*sqrt(pow(Yold(491),2)+pow(Yold(492),2));
-    point02(2) =  Gx*sin(Yold(496))*cos(Yold(497)) - Gy*sin(Yold(497))*sin(Yold(496)) + Gz*cos(Yold(496))- 0.5*rho*Cdn*Az*Yold(492)*sqrt(pow(Yold(491),2)+pow(Yold(492),2));
+    point02(1) =  Gy*cos(Yold(497)) + Gx*sin(Yold(497));
+    point02(2) =  Gx*sin(Yold(496))*cos(Yold(497)) - Gy*sin(Yold(497))*sin(Yold(496)) + Gz*cos(Yold(496));
     
     VectorXd point03(2);
     point03(0) = 0;              //O2mega边界条件（下）

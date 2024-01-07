@@ -22,10 +22,7 @@ class FiberMain
         int TimeStep;
         double DelTime;
 
-        // MatrixXd Mcsv;
-        // VectorXd TransVal;
         Matrix<double, 500, 1> ans;
-        // VectorXd a(500);
 
         int k;
 

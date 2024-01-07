@@ -21,6 +21,8 @@ int main()
             fscanf(file, "%d", &n);
             fclose(file);
 
+            if(n == 0)
+            {
             printf("Data in Citrine\n");  
 
             FiberMain aa;
@@ -31,6 +33,11 @@ int main()
             function0();
 
             timeforCitrine5++ ;
+            }
+            else
+            {
+                break;
+            }
         }
     }
     return 0;
