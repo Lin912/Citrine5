@@ -55,6 +55,7 @@ class Jacobian
         ~Jacobian();
 
         int judg(double a); //判断符号正负
+        //double D(double a);//求导数
         
         MatrixXd jacobian();
 

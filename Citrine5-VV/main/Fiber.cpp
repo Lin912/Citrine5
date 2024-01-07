@@ -8,13 +8,7 @@ FiberMain::FiberMain()
     variable = 10;
     TotNoV = 500;
     TimeStep = 1000;
-    DelTime = 0.01;
-
-    // Mcsv(TimeStep, TotNoV);                                    //初始CSV空表格
-    // Mcsv.Zero(TimeStep, TotNoV);  
-    
-
-
+    DelTime = 0.005;
 }
 
 FiberMain::~FiberMain()
@@ -22,7 +16,7 @@ FiberMain::~FiberMain()
 
 void FiberMain::Calculation(int index)
 {   
-    VectorXd TransVal(TotNoV);                                          //计算容器
+    VectorXd TransVal(TotNoV);
 
     if(index == 0)
     {
@@ -55,23 +49,22 @@ void FiberMain::Calculation(int index)
             a(i*10 + 4) = 0;    //Sn
             a(i*10 + 5) = 0;    //Sb
 
-            a(i*10 + 6) = 0.00001;    //Phi
-            a(i*10 + 7) = 0.00001;    //Theta
+            a(i*10 + 6) = 0.00001;    //Theta
+            a(i*10 + 7) = 0.00001;    //Phi
 
             a(i*10 + 8) = 0.00001;    //O2mega
             a(i*10 + 9) = 0.00001;    //O3mega
         }
         a(493) = 1.0;
         TransVal = a;
-        // cout << TransVal;
     }
 
-    //计算部
+    //Computational Component
     Iterator b(TransVal, TransVal, times, Error);                //迭代设置
     b.begin(index);                                                  //迭代开始(i控制读入流场速度值)
     TransVal = b.out();
 
-    //输运部
+    //Data transportation Component
     MatrixXd Mcsv(TimeStep, TotNoV);                                    //创建读取CSV表格                                
     MatrixXd zero(TimeStep, TotNoV);
     
@@ -91,10 +84,8 @@ void FiberMain::Calculation(int index)
     }
 
 
-    //储存部
+    //Data storage Component
     FiberRO a;
     a.Output(zero, TimeStep, TotNoV);
-
-    a.Outforce(TransVal);                                           //力输出项
 
 }

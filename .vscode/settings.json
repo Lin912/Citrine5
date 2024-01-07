@@ -1,6 +1,8 @@
 {
     "files.associations": {
-        "dense": "cpp"
+        "dense": "cpp",
+        "cmath": "cpp",
+        "complex": "cpp"
     },
     "C_Cpp.errorSquiggles": "enabled"
 }
