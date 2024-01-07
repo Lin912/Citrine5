@@ -23,6 +23,7 @@ class FiberRO
         char* fileBottomVely;
         char* fileBottomVelz;
         string filePhysical;
+        string fileTowedObject;
         string fileDelta;
 
         char* outfile;
@@ -41,6 +42,7 @@ class FiberRO
 
         vector<double> ReadBottomVel();
         vector<double> ReadPhysical();
+        vector<double> ReadBottomG();
 
         void Output(MatrixXd &arr, int rr, int ll);
         double flutov(char* filename);

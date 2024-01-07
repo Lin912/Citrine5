@@ -37,6 +37,13 @@ Add::Add(VectorXd &arr, VectorXd &brr, int index)
 
     deltaT = a.ReadDelta()[0];
     deltaS = a.ReadDelta()[1];
+
+    Gx = a.ReadBottomG()[0];
+    Gy = a.ReadBottomG()[1];
+    Gz = a.ReadBottomG()[2];
+    Ax = a.ReadBottomG()[3];
+    Ay = a.ReadBottomG()[4];
+    Az = a.ReadBottomG()[5];
 }
 
 Add::~Add()
@@ -58,17 +65,18 @@ VectorXd Add::Addyold()
     point01(0) = 0;              //O2mega边界条件（上）
     point01(1) = 0;              //O3mega边界条件
 
-    VectorXd point02(3);
-    point02(0) = Vb1*cos(Yold(496))*cos(Yold(497)) - Vb2*sin(Yold(497))*cos(Yold(496)) - Vb3*sin(Yold(496));          //速度T边界条件（下）
-    point02(1) = Vb2*cos(Yold(497)) + Vb1*sin(Yold(497));          //速度Sn边界条件
-    point02(2) = Vb1*sin(Yold(496))*cos(Yold(497)) - Vb2*sin(Yold(497))*sin(Yold(496)) + Vb3*cos(Yold(496));             //速度Sb边界条件
-
-
     // VectorXd point02(3);
-    // point02(0) = G*cos(Yold(497))*cos(Yold(496));          //速度T边界条件（下）
-    // point02(1) = -G*sin(Yold(496)) - 0.5*rho*Cdn*Sd*Yold(491)*sqrt(pow(Yold(491),2)+pow(Yold(492),2));          //速度Sn边界条件
-    // point02(2) = G*cos(Yold(496))*sin(Yold(497)) - 0.5*rho*Cdn*Sd*Yold(492)*sqrt(pow(Yold(491),2)+pow(Yold(492),2));             //速度Sb边界条件
+    // point02(0) = Vb1*cos(Yold(496))*cos(Yold(497)) - Vb2*sin(Yold(497))*cos(Yold(496)) - Vb3*sin(Yold(496));          //速度T边界条件（下）
+    // point02(1) = Vb2*cos(Yold(497)) + Vb1*sin(Yold(497));          //速度Sn边界条件
+    // point02(2) = Vb1*sin(Yold(496))*cos(Yold(497)) - Vb2*sin(Yold(497))*sin(Yold(496)) + Vb3*cos(Yold(496));             //速度Sb边界条件
 
+
+    VectorXd point02(3);
+    VectorXd point02(3);
+    point02(0) = Gx*cos(Yold(496))*cos(Yold(497)) - Gy*sin(Yold(497))*cos(Yold(496)) - Gz*sin(Yold(496));
+    point02(1) = Gy*cos(Yold(497)) + Gx*sin(Yold(497)) - 0.5*rho*Cdn*Ay*Yold(491)*sqrt(pow(Yold(491),2)+pow(Yold(492),2));
+    point02(2) = Gx*sin(Yold(496))*cos(Yold(497)) - Gy*sin(Yold(497))*sin(Yold(496)) + Gz*cos(Yold(496))- 0.5*rho*Cdn*Az*Yold(492)*sqrt(pow(Yold(491),2)+pow(Yold(492),2));
+    
     VectorXd point03(2);
     point03(0) = 0;              //O2mega边界条件（下）
     point03(1) = 0;              //O3mega边界条件
@@ -102,15 +110,15 @@ VectorXd Add::Addynew()
     point01(0) = 0;              //O2mega边界条件（上）
     point01(1) = 0;              //O3mega边界条件
 
-    VectorXd point02(3);
-    point02(0) = Vb1*cos(Ynew(496))*cos(Ynew(497)) - Vb2*sin(Ynew(497))*cos(Ynew(496)) - Vb3*sin(Ynew(496));           
-    point02(1) = Vb2*cos(Ynew(497)) + Vb1*sin(Ynew(497));
-    point02(2) = Vb1*sin(Ynew(496))*cos(Ynew(497)) - Vb2*sin(Ynew(497))*sin(Ynew(496)) + Vb3*cos(Ynew(496));
-
     // VectorXd point02(3);
-    // point02(0) = G*cos(Ynew(497))*cos(Ynew(496));            //速度T边界条件（下）
-    // point02(1) = -G*sin(Ynew(496)) - 0.5*rho*Cdn*Sd*Ynew(491)*sqrt(pow(Ynew(491),2)+pow(Ynew(492),2));         //速度Sn边界条件
-    // point02(2) = G*cos(Ynew(496))*sin(Ynew(497))- 0.5*rho*Cdn*Sd*Ynew(492)*sqrt(pow(Ynew(491),2)+pow(Ynew(492),2));           //速度Sb边界条件
+    // point02(0) = Vb1*cos(Ynew(496))*cos(Ynew(497)) - Vb2*sin(Ynew(497))*cos(Ynew(496)) - Vb3*sin(Ynew(496));           
+    // point02(1) = Vb2*cos(Ynew(497)) + Vb1*sin(Ynew(497));
+    // point02(2) = Vb1*sin(Ynew(496))*cos(Ynew(497)) - Vb2*sin(Ynew(497))*sin(Ynew(496)) + Vb3*cos(Ynew(496));
+
+    VectorXd point02(3);
+    point02(0) = Gx*cos(Ynew(496))*cos(Ynew(497)) - Gy*sin(Ynew(497))*cos(Ynew(496)) - Gz*sin(Ynew(496));
+    point02(1) = Gy*cos(Ynew(497)) + Gx*sin(Ynew(497)) - 0.5*rho*Cdn*Ay*Ynew(491)*sqrt(pow(Ynew(491),2)+pow(Ynew(492),2));
+    point02(2) = Gx*sin(Ynew(496))*cos(Ynew(497)) - Gy*sin(Ynew(497))*sin(Ynew(496)) + Gz*cos(Ynew(496))- 0.5*rho*Cdn*Az*Ynew(492)*sqrt(pow(Ynew(491),2)+pow(Ynew(492),2));
 
 
     VectorXd point03(2);

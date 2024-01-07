@@ -11,6 +11,7 @@ FiberRO::FiberRO()
     fileWater = "../csv./Water.csv";
     filePhysical = "../csv./Parameters.csv";
     fileDelta = "../csv./Delta.csv";
+    fileTowedObject = '../csv./TowedObject.csv';
 
     TotNoV = 500;
 
@@ -286,4 +287,34 @@ void FiberRO::Outforce(VectorXd v)
  
     outfile << bb;
     outfile.close();
+}
+
+vector<double> FiberRO::ReadBottomG()
+{
+    vector<double> arrdata;
+    int index = 1;//The 2nd row
+
+    ifstream infile(fileTowedObject, ios::in);
+    if (!infile)
+    {
+        cout << "Could not Open" + fileTowedObject + ".csv" << endl;
+        exit(1);
+    }
+
+    string line;
+    string field;
+    for (int i = 0; i <= index; i++)
+    {
+        getline(infile, line);
+    }
+    stringstream sin(line);
+    int colindex = 0;
+    while (getline(sin, field, ','))
+    {
+        double dvalue = atof(field.c_str());
+        arrdata.push_back(dvalue);
+    }
+    infile.close();
+
+    return arrdata;
 }
