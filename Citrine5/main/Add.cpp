@@ -72,10 +72,9 @@ VectorXd Add::Addyold()
 
 
     VectorXd point02(3);
-    VectorXd point02(3);
-    point02(0) = Gx*cos(Yold(496))*cos(Yold(497)) - Gy*sin(Yold(497))*cos(Yold(496)) - Gz*sin(Yold(496));
-    point02(1) = Gy*cos(Yold(497)) + Gx*sin(Yold(497)) - 0.5*rho*Cdn*Ay*Yold(491)*sqrt(pow(Yold(491),2)+pow(Yold(492),2));
-    point02(2) = Gx*sin(Yold(496))*cos(Yold(497)) - Gy*sin(Yold(497))*sin(Yold(496)) + Gz*cos(Yold(496))- 0.5*rho*Cdn*Az*Yold(492)*sqrt(pow(Yold(491),2)+pow(Yold(492),2));
+    point02(0) =  Gx*cos(Yold(496))*cos(Yold(497)) - Gy*sin(Yold(497))*cos(Yold(496)) - Gz*sin(Yold(496));
+    point02(1) =  Gy*cos(Yold(497)) + Gx*sin(Yold(497)) - 0.5*rho*Cdn*Ay*Yold(491)*sqrt(pow(Yold(491),2)+pow(Yold(492),2));
+    point02(2) =  Gx*sin(Yold(496))*cos(Yold(497)) - Gy*sin(Yold(497))*sin(Yold(496)) + Gz*cos(Yold(496))- 0.5*rho*Cdn*Az*Yold(492)*sqrt(pow(Yold(491),2)+pow(Yold(492),2));
     
     VectorXd point03(2);
     point03(0) = 0;              //O2mega边界条件（下）
@@ -88,8 +87,8 @@ VectorXd Add::Addyold()
 
     temp.segment(10, 480) = Yold.segment(10, 480);
 
-    temp.segment(490, 3) = point02;
-    temp.segment(493, 3) = Yold.segment(493, 3);
+    temp.segment(490, 3) = Yold.segment(490, 3);
+    temp.segment(493, 3) = point02;
 
     temp.segment(496, 2) = Yold.segment(496, 2);
     temp.tail(2) = point03;
@@ -116,9 +115,9 @@ VectorXd Add::Addynew()
     // point02(2) = Vb1*sin(Ynew(496))*cos(Ynew(497)) - Vb2*sin(Ynew(497))*sin(Ynew(496)) + Vb3*cos(Ynew(496));
 
     VectorXd point02(3);
-    point02(0) = Gx*cos(Ynew(496))*cos(Ynew(497)) - Gy*sin(Ynew(497))*cos(Ynew(496)) - Gz*sin(Ynew(496));
-    point02(1) = Gy*cos(Ynew(497)) + Gx*sin(Ynew(497)) - 0.5*rho*Cdn*Ay*Ynew(491)*sqrt(pow(Ynew(491),2)+pow(Ynew(492),2));
-    point02(2) = Gx*sin(Ynew(496))*cos(Ynew(497)) - Gy*sin(Ynew(497))*sin(Ynew(496)) + Gz*cos(Ynew(496))- 0.5*rho*Cdn*Az*Ynew(492)*sqrt(pow(Ynew(491),2)+pow(Ynew(492),2));
+    point02(0) =  Gx*cos(Ynew(496))*cos(Ynew(497)) - Gy*sin(Ynew(497))*cos(Ynew(496)) - Gz*sin(Ynew(496));
+    point02(1) =  Gy*cos(Ynew(497)) + Gx*sin(Ynew(497));
+    point02(2) =  Gx*sin(Ynew(496))*cos(Ynew(497)) - Gy*sin(Ynew(497))*sin(Ynew(496)) + Gz*cos(Ynew(496));
 
 
     VectorXd point03(2);
@@ -131,8 +130,8 @@ VectorXd Add::Addynew()
 
 
     temp.segment(10, 480) = Ynew.segment(10, 480);
-    temp.segment(490, 3) = point02;
-    temp.segment(493, 3) = Ynew.segment(493, 3);
+    temp.segment(490, 3) = Ynew.segment(490,3);
+    temp.segment(493, 3) = point02;
 
     temp.segment(496, 2) = Ynew.segment(496, 2);
     temp.tail(2) = point03;

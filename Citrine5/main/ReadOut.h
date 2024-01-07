@@ -23,7 +23,7 @@ class FiberRO
         char* fileBottomVely;
         char* fileBottomVelz;
         string filePhysical;
-        string fileTowedObject;
+        string fileObject;
         string fileDelta;
 
         char* outfile;

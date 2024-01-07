@@ -67,7 +67,7 @@ MatrixXd Jacobian::jacobian()
     temp(0, 3) = 0;
     temp(0, 4) = 0;
     temp(0, 5) = 0;
-   temp(0, 6) = Vt1*cos(Ynew(7))*sin(Ynew(6)) - Vt2*sin(Ynew(7))*sin(Ynew(6));   
+    temp(0, 6) = Vt1*cos(Ynew(7))*sin(Ynew(6)) - Vt2*sin(Ynew(7))*sin(Ynew(6));   
     temp(0, 7) = Vt3*cos(Ynew(7)) + Vt2*cos(Ynew(7))*cos(Ynew(6)) + Vt1*cos(Ynew(6))*sin(Ynew(7));
     temp(0, 8) = 0;
     temp(0, 9) = 0;
@@ -130,8 +130,8 @@ MatrixXd Jacobian::jacobian()
     temp(495, 499) = 0;
 
     temp(496, 490) = 0;
-    temp(496, 491) = (Cdn*Ay*rho*sqrt(pow(Ynew(491),2) + pow(Ynew(492),2)))/2 + (Cdn*Ay*rho*pow(Ynew(491),2))/(2*sqrt(pow(Ynew(491),2) + pow(Ynew(492),2)));
-    temp(496, 492) = (Cdn*Ay*rho*Ynew(491)*Ynew(492))/(2*sqrt(pow(Ynew(491),2) + pow(Ynew(492),2)));
+    temp(496, 491) = 0;
+    temp(496, 492) = 0;
     temp(496, 493) = 0;
     temp(496, 494) = 1;
     temp(496, 495) = 0;
@@ -141,8 +141,8 @@ MatrixXd Jacobian::jacobian()
     temp(496, 499) = 0;
 
     temp(497, 490) = 0;
-    temp(497, 491) = (Cdb*Az*rho*Ynew(491)*Ynew(492))/(2*sqrt(pow(Ynew(491),2) + pow(Ynew(492),2)));
-    temp(497, 492) = (Cdb*Az*rho*sqrt(pow(Ynew(491),2) + pow(Ynew(492),2)))/2 + (Cdb*Az*rho*pow(Ynew(492),2))/(2*sqrt(pow(Ynew(491),2) + pow(Ynew(492),2)));
+    temp(497, 491) = 0;
+    temp(497, 492) = 0;
     temp(497, 493) = 0;
     temp(497, 494) = 0;
     temp(497, 495) = 1;

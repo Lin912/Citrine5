@@ -39,6 +39,13 @@ Fx::Fx(VectorXd& arr, VectorXd& brr, int index)
     deltaT = a.ReadDelta()[0];
     deltaS = a.ReadDelta()[1];
 
+    Gx = a.ReadBottomG()[0];
+    Gy = a.ReadBottomG()[1];
+    Gz = a.ReadBottomG()[2];
+    Ax = a.ReadBottomG()[3];
+    Ay = a.ReadBottomG()[4];
+    Az = a.ReadBottomG()[5];
+
 }
 
 Fx::~Fx()
@@ -1008,17 +1015,17 @@ VectorXd Fx::fx()
     // BCtemp1(4) = Y49new(9);
 
 
-    // BCtemp1(0) = Y49new(3) - G*cos(Y49new(7))*cos(Y49new(6));
-    // BCtemp1(1) = Y49new(4) + G*sin(Y49new(6)) + 0.5*rho*Cdn*Sd*Y49new(1)*sqrt(pow(Y49new(1),2)+pow(Y49new(2),2));
-    // BCtemp1(2) = Y49new(5) - G*cos(Y49new(6))*sin(Y49new(7))+ 0.5*rho*Cdn*Sd*Y49new(2)*sqrt(pow(Y49new(1),2)+pow(Y49new(2),2));
-    // BCtemp1(3) = Y49new(8);
-    // BCtemp1(4) = Y49new(9);
-
-    BCtemp1(0) = Y49new(0) - Vb1*cos(Y49new(7))*cos(Y49new(6)) + Vb2*sin(Y49new(7))*cos(Y49new(6)) + Vb3*sin(Y49new(6));
-    BCtemp1(1) = Y49new(1) - Vb2*cos(Y49new(7)) - Vb1*sin(Y49new(7));
-    BCtemp1(2) = Y49new(5) - Vb1*sin(Y49new(6))*cos(Y49new(7)) + Vb2*sin(Y49new(7))*sin(Y49new(6)) - Vb3*cos(Y49new(6));
+    BCtemp1(0) = Y49new(3) - Gx*cos(Y49new(6))*cos(Y49new(7)) + Gy*sin(Y49new(7))*cos(Y49new(6)) + Gz*sin(Y49new(6));
+    BCtemp1(1) = Y49new(4) - Gy*cos(Y49new(7)) - Gx*sin(Y49new(7));
+    BCtemp1(2) = Y49new(5) - Gx*sin(Y49new(6))*cos(Y49new(7)) + Gy*sin(Y49new(7))*sin(Y49new(6)) - Gz*cos(Y49new(6));
     BCtemp1(3) = Y49new(8);
     BCtemp1(4) = Y49new(9);
+
+    // BCtemp1(0) = Y49new(0) - Vb1*cos(Y49new(7))*cos(Y49new(6)) + Vb2*sin(Y49new(7))*cos(Y49new(6)) + Vb3*sin(Y49new(6));
+    // BCtemp1(1) = Y49new(1) - Vb2*cos(Y49new(7)) - Vb1*sin(Y49new(7));
+    // BCtemp1(2) = Y49new(5) - Vb1*sin(Y49new(6))*cos(Y49new(7)) + Vb2*sin(Y49new(7))*sin(Y49new(6)) - Vb3*cos(Y49new(6));
+    // BCtemp1(3) = Y49new(8);
+    // BCtemp1(4) = Y49new(9);
 
 
 

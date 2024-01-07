@@ -49,6 +49,6 @@ void function0()
     printf("Data in Citrine\n");
 
     FILE* file = fopen("../control./judge.txt", "w");
-    fprintf(file, "1");
+    fprintf(file, "0");
     fclose(file);
 }
