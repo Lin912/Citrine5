@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
 #include <Eigen/Dense>
-#include "Read&Out.h"
+#include "ReadOut.h"
 
 using namespace std;
 using namespace Eigen;

@@ -1,0 +1,1 @@
+g++ -Ofast Add.cpp BC.cpp Fiber.cpp Fx.cpp Iterator.cpp Jacobian.cpp Load.cpp main.cpp MNQ.cpp ReadOut.cpp

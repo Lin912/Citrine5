@@ -1,5 +1,4 @@
-#ifndef __BC_H__
-#define __BC_H__
+#pragma once
 #include <iostream>
 #include <Eigen/Dense>
 
@@ -19,5 +18,3 @@ class BC
             VectorXd yold();
             VectorXd ynew();
 };
-
-#endif
