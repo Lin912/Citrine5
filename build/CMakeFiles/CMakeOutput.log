@@ -28,15 +28,15 @@ The CXX compiler identification is GNU, found in "E:/Git/Citrine5/build/CMakeFil
 Determining if the C compiler works passed with the following output:
 Change Dir: E:/Git/Citrine5/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):E:/Gnugcc/mingw64/bin/mingw32-make.exe -f Makefile cmTC_71431/fast && E:/Gnugcc/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_71431.dir\build.make CMakeFiles/cmTC_71431.dir/build
+Run Build Command(s):E:/Gnugcc/mingw64/bin/mingw32-make.exe -f Makefile cmTC_a3edc/fast && E:/Gnugcc/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_a3edc.dir\build.make CMakeFiles/cmTC_a3edc.dir/build
 mingw32-make.exe[1]: Entering directory 'E:/Git/Citrine5/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_71431.dir/testCCompiler.c.obj
-E:\Gnugcc\mingw64\bin\gcc.exe    -o CMakeFiles\cmTC_71431.dir\testCCompiler.c.obj -c E:\Git\Citrine5\build\CMakeFiles\CMakeTmp\testCCompiler.c
-Linking C executable cmTC_71431.exe
-D:\Cmake\bin\cmake.exe -E cmake_link_script CMakeFiles\cmTC_71431.dir\link.txt --verbose=1
-D:\Cmake\bin\cmake.exe -E rm -f CMakeFiles\cmTC_71431.dir/objects.a
-E:\Gnugcc\mingw64\bin\ar.exe qc CMakeFiles\cmTC_71431.dir/objects.a @CMakeFiles\cmTC_71431.dir\objects1.rsp
-E:\Gnugcc\mingw64\bin\gcc.exe -Wl,--whole-archive CMakeFiles\cmTC_71431.dir/objects.a -Wl,--no-whole-archive -o cmTC_71431.exe -Wl,--out-implib,libcmTC_71431.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_71431.dir\linklibs.rsp
+Building C object CMakeFiles/cmTC_a3edc.dir/testCCompiler.c.obj
+E:\Gnugcc\mingw64\bin\gcc.exe    -o CMakeFiles\cmTC_a3edc.dir\testCCompiler.c.obj -c E:\Git\Citrine5\build\CMakeFiles\CMakeTmp\testCCompiler.c
+Linking C executable cmTC_a3edc.exe
+D:\Cmake\bin\cmake.exe -E cmake_link_script CMakeFiles\cmTC_a3edc.dir\link.txt --verbose=1
+D:\Cmake\bin\cmake.exe -E rm -f CMakeFiles\cmTC_a3edc.dir/objects.a
+E:\Gnugcc\mingw64\bin\ar.exe qc CMakeFiles\cmTC_a3edc.dir/objects.a @CMakeFiles\cmTC_a3edc.dir\objects1.rsp
+E:\Gnugcc\mingw64\bin\gcc.exe -Wl,--whole-archive CMakeFiles\cmTC_a3edc.dir/objects.a -Wl,--no-whole-archive -o cmTC_a3edc.exe -Wl,--out-implib,libcmTC_a3edc.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_a3edc.dir\linklibs.rsp
 mingw32-make.exe[1]: Leaving directory 'E:/Git/Citrine5/build/CMakeFiles/CMakeTmp'
 
 
@@ -44,15 +44,15 @@ mingw32-make.exe[1]: Leaving directory 'E:/Git/Citrine5/build/CMakeFiles/CMakeTm
 Determining if the CXX compiler works passed with the following output:
 Change Dir: E:/Git/Citrine5/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):E:/Gnugcc/mingw64/bin/mingw32-make.exe -f Makefile cmTC_292fc/fast && E:/Gnugcc/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_292fc.dir\build.make CMakeFiles/cmTC_292fc.dir/build
+Run Build Command(s):E:/Gnugcc/mingw64/bin/mingw32-make.exe -f Makefile cmTC_62a38/fast && E:/Gnugcc/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_62a38.dir\build.make CMakeFiles/cmTC_62a38.dir/build
 mingw32-make.exe[1]: Entering directory 'E:/Git/Citrine5/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_292fc.dir/testCXXCompiler.cxx.obj
-E:\Gnugcc\mingw64\bin\g++.exe    -o CMakeFiles\cmTC_292fc.dir\testCXXCompiler.cxx.obj -c E:\Git\Citrine5\build\CMakeFiles\CMakeTmp\testCXXCompiler.cxx
-Linking CXX executable cmTC_292fc.exe
-D:\Cmake\bin\cmake.exe -E cmake_link_script CMakeFiles\cmTC_292fc.dir\link.txt --verbose=1
-D:\Cmake\bin\cmake.exe -E rm -f CMakeFiles\cmTC_292fc.dir/objects.a
-E:\Gnugcc\mingw64\bin\ar.exe qc CMakeFiles\cmTC_292fc.dir/objects.a @CMakeFiles\cmTC_292fc.dir\objects1.rsp
-E:\Gnugcc\mingw64\bin\g++.exe -Wl,--whole-archive CMakeFiles\cmTC_292fc.dir/objects.a -Wl,--no-whole-archive -o cmTC_292fc.exe -Wl,--out-implib,libcmTC_292fc.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_292fc.dir\linklibs.rsp
+Building CXX object CMakeFiles/cmTC_62a38.dir/testCXXCompiler.cxx.obj
+E:\Gnugcc\mingw64\bin\g++.exe    -o CMakeFiles\cmTC_62a38.dir\testCXXCompiler.cxx.obj -c E:\Git\Citrine5\build\CMakeFiles\CMakeTmp\testCXXCompiler.cxx
+Linking CXX executable cmTC_62a38.exe
+D:\Cmake\bin\cmake.exe -E cmake_link_script CMakeFiles\cmTC_62a38.dir\link.txt --verbose=1
+D:\Cmake\bin\cmake.exe -E rm -f CMakeFiles\cmTC_62a38.dir/objects.a
+E:\Gnugcc\mingw64\bin\ar.exe qc CMakeFiles\cmTC_62a38.dir/objects.a @CMakeFiles\cmTC_62a38.dir\objects1.rsp
+E:\Gnugcc\mingw64\bin\g++.exe -Wl,--whole-archive CMakeFiles\cmTC_62a38.dir/objects.a -Wl,--no-whole-archive -o cmTC_62a38.exe -Wl,--out-implib,libcmTC_62a38.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_62a38.dir\linklibs.rsp
 mingw32-make.exe[1]: Leaving directory 'E:/Git/Citrine5/build/CMakeFiles/CMakeTmp'
 
 
