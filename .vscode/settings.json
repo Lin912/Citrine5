@@ -4,5 +4,6 @@
         "cmath": "cpp",
         "complex": "cpp"
     },
-    "C_Cpp.errorSquiggles": "enabled"
+    "C_Cpp.errorSquiggles": "enabled",
+    "cmake.sourceDirectory": "E:/Git/Citrine5/Citrine5"
 }
