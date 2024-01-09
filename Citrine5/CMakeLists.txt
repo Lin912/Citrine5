@@ -13,4 +13,4 @@ message(${EIGEN3_INCLUDE_DIR})
 
 aux_source_directory(Cpp srcs)
 add_executable(${PROJECT_NAME} ${srcs})
-target_compile_options(Citrine5 PRIVATE -fno-var-tracking-assignments)
+#target_compile_options(Citrine5 PRIVATE -fno-var-tracking-assignments)
