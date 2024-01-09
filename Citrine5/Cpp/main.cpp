@@ -4,7 +4,6 @@
 #include "../Head/Fiber.h"
 
 
-
 using namespace std;
 
 void function0();

@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 3.0.0)
 project(Citrine5)
 
-add_definitions(-Ofast)
+#add_definitions(-Ofast)
+add_compile_options(-Ofast)
 
 # set(Eigen3_DIR "C:/Program Files/Eigen3/share/eigen3/cmake")
 find_package(eigen3)
