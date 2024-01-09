@@ -27,7 +27,7 @@ int main()
     {
         b(i, 0) = 0;
         b(i, 1) = 0.3 * 2*pi/2.5 *sin(2*pi/2.5 * (i+1) * DelTime);
-        // b(i, 2) = 0.3 * 2*pi/2.5 *cos(2*pi/2.5 * (i+1) * DelTime);
+        b(i, 2) = 0.3 * 2*pi/2.5 *cos(2*pi/2.5 * (i+1) * DelTime);
     }
 
     ofstream dataFile;
