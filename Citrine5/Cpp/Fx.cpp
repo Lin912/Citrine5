@@ -1,4 +1,4 @@
-#include "Fx.h"
+#include "../Head/Fx.h"
 
 Fx::Fx(VectorXd& arr, VectorXd& brr, int index)
 {

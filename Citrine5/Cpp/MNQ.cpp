@@ -1,4 +1,4 @@
-#include "MNQ.h"
+#include "../Head/MNQ.h"
 
 
 MNQ::MNQ(VectorXd& arr, VectorXd& brr, int index)

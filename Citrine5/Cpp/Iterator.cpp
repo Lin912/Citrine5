@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cmath>
 #include <Eigen/Dense>
-#include "Iterator.h"
+#include "../Head/Iterator.h"
 
 using namespace std;
 using namespace Eigen;

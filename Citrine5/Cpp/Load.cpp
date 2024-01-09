@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cmath>
 #include <Eigen/Dense>
-#include "Load.h"
+#include "../Head/Load.h"
 
 Load::Load(VectorXd& arr, VectorXd& brr)
 {

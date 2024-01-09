@@ -1,6 +1,6 @@
 #include <iostream>
 #include <Eigen/Dense>
-#include "BC.h"
+#include "../Head/BC.h"
 
 BC::BC(VectorXd &arr, VectorXd &brr)
 {
