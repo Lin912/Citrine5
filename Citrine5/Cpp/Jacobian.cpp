@@ -204,7 +204,7 @@ MatrixXd Jacobian::jacobian()
         temp(i*10 + 6, i*10 + 3) = -deltaS*deltaT*(Ynew(i*10+9) - (0.25*Cdn*rho*sqrt(pow((Ynew(i*10+2) - V3*cos(Ynew(i*10+6)) - V1*cos(Ynew(i*10+7))*sin(Ynew(i*10+6)) + V2*sin(Ynew(i*10+7))*sin(Ynew(i*10+6))),2) + pow((V2*cos(Ynew(i*10+7)) - Ynew(i*10+1) + V1*sin(Ynew(i*10+7))),2))*(V2*cos(Ynew(i*10+7)) - Ynew(i*10+1) + V1*sin(Ynew(i*10+7))))/(A*E*sqrt(Ynew(i*10+3)/(A*E) + 1)));
         temp(i*10 + 7, i*10 + 3) = deltaS*deltaT*(Ynew(i*10+8) - (0.25*Cdb*rho*sqrt(pow((Ynew(i*10+2) - V3*cos(Ynew(i*10+6)) - V1*cos(Ynew(i*10+7))*sin(Ynew(i*10+6)) + V2*sin(Ynew(i*10+7))*sin(Ynew(i*10+6))),2) + pow((V2*cos(Ynew(i*10+7)) - Ynew(i*10+1) + V1*sin(Ynew(i*10+7))),2))*(Ynew(i*10+2) - V3*cos(Ynew(i*10+6)) - V1*cos(Ynew(i*10+7))*sin(Ynew(i*10+6)) + V2*sin(Ynew(i*10+7))*sin(Ynew(i*10+6))))/(A*E*sqrt(Ynew(i*10+3)/(A*E) + 1)));
         temp(i*10 + 8, i*10 + 3) = -(3*Ynew(i*10+5)*deltaS*deltaT*pow((Ynew(i*10+3)/(A*E) + 1),2))/(A*E);
-        temp(i*10 + 9, i*10 + 3) = deltaS*deltaT*(((Ynew(i*10+4)/Ynew(i*10+3))*(Ynew(i*10+3)/(A*E) + 1)*pow((Ynew(i*10+3)/(A*E) + 1),2))/(A*E) + (2*Ynew(i*10+4)*(Ynew(i*10+3)/(A*E) + 1)*(Ynew(i*10+3)/(A*E) + 1))/(A*E));
+        temp(i*10 + 9, i*10 + 3) = (3*Ynew(i*10+4)*deltaS*deltaT*pow((Ynew(i*10+3)/(A*E) + 1),2))/(A*E);
         temp(i*10 + 10, i*10 + 3) = (2*deltaS)/(A*E);
         temp(i*10 + 11, i*10 + 3) = -(deltaS*cos(Ynew(i*10+6))*(Yold(i*10+6) - Ynew(i*10+6)))/(A*E);
         temp(i*10 + 12, i*10 + 3) = -(deltaS*(Yold(i*10+7) - Ynew(i*10+7)))/(A*E);
@@ -281,7 +281,7 @@ MatrixXd Jacobian::jacobian()
         temp(i*10 + 6, i*10 + 13) = -deltaS*deltaT*(Ynew(i*10+19) - (0.25*Cdn*rho*sqrt(pow((Ynew(i*10+12) - V3*cos(Ynew(i*10+16)) - V1*cos(Ynew(i*10+17))*sin(Ynew(i*10+16)) + V2*sin(Ynew(i*10+17))*sin(Ynew(i*10+16))),2) + pow((V2*cos(Ynew(i*10+17)) - Ynew(i*10+11) + V1*sin(Ynew(i*10+17))),2))*(V2*cos(Ynew(i*10+17)) - Ynew(i*10+11) + V1*sin(Ynew(i*10+17))))/(A*E*sqrt(Ynew(i*10+13)/(A*E) + 1)));
         temp(i*10 + 7, i*10 + 13) = deltaS*deltaT*(Ynew(i*10+18) - (0.25*Cdb*rho*sqrt(pow((Ynew(i*10+12) - V3*cos(Ynew(i*10+16)) - V1*cos(Ynew(i*10+17))*sin(Ynew(i*10+16)) + V2*sin(Ynew(i*10+17))*sin(Ynew(i*10+16))),2) + pow((V2*cos(Ynew(i*10+17)) - Ynew(i*10+11) + V1*sin(Ynew(i*10+17))),2))*(Ynew(i*10+12) - V3*cos(Ynew(i*10+16)) - V1*cos(Ynew(i*10+17))*sin(Ynew(i*10+16)) + V2*sin(Ynew(i*10+17))*sin(Ynew(i*10+16))))/(A*E*sqrt(Ynew(i*10+13)/(A*E) + 1)));
         temp(i*10 + 8, i*10 + 13) = -(3*Ynew(i*10+15)*deltaS*deltaT*pow((Ynew(i*10+13)/(A*E) + 1),2))/(A*E);
-        temp(i*10 + 9, i*10 + 13) = deltaS*deltaT*(((Ynew(i*10+14)/Ynew(i*10+13))*(Ynew(i*10+13)/(A*E) + 1)*pow((Ynew(i*10+13)/(A*E) + 1),2))/(A*E) + (2*Ynew(i*10+14)*(Ynew(i*10+13)/(A*E) + 1)*(Ynew(i*10+13)/(A*E) + 1))/(A*E));
+        temp(i*10 + 9, i*10 + 13) = (3*Ynew(i*10+14)*deltaS*deltaT*pow((Ynew(i*10+13)/(A*E) + 1),2))/(A*E);
         temp(i*10 + 10, i*10 + 13) = (2*deltaS)/(A*E);
         temp(i*10 + 11, i*10 + 13) = -(deltaS*cos(Ynew(i*10+16))*(Yold(i*10+16) - Ynew(i*10+16)))/(A*E);
         temp(i*10 + 12, i*10 + 13) = -(deltaS*(Yold(i*10+17) - Ynew(i*10+17)))/(A*E);
