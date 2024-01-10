@@ -101,7 +101,7 @@ VectorXd Add::Addynew()
     VectorXd temp(500);
 
     VectorXd point00(3);
-    point00(0) = Vt1*cos(Ynew(6))*cos(Ynew(7)) - Vt2*sin(Ynew(7))*cos(Ynew(6)) - Vt3*sin(Ynew(6));            //速度u边界条件（上）
+    point00(0) = Vt1*cos(Ynew(6))*cos(Ynew(7)) + Vt2*sin(Ynew(7))*cos(Ynew(6)) - Vt3*sin(Ynew(6));            //速度u边界条件（上）
     point00(1) = Vt2*cos(Ynew(7)) + Vt1*sin(Ynew(7));            //速度V边界条件
     point00(2) = Vt1*sin(Ynew(6))*cos(Ynew(7)) - Vt2*sin(Ynew(7))*sin(Ynew(6)) + Vt3*cos(Ynew(6));              //速度w边界条件
 
