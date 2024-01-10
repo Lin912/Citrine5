@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = @CMakeFiles/Citrine5.dir/includes_CXX.rsp
 
-CXX_FLAGS = -g -Ofast
+CXX_FLAGS = -g -Ofast -fno-var-tracking-assignments
 
