@@ -15,7 +15,6 @@
 		[
 			"add_executable",
 			"add_compile_options",
-			"target_compile_options",
 			"include_directories"
 		],
 		"files" : 
@@ -42,17 +41,11 @@
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 16,
-				"parent" : 0
-			},
-			{
-				"command" : 3,
-				"file" : 0,
 				"line" : 10,
 				"parent" : 0
 			},
 			{
-				"command" : 3,
+				"command" : 2,
 				"file" : 0,
 				"line" : 11,
 				"parent" : 0
@@ -70,20 +63,16 @@
 				{
 					"backtrace" : 2,
 					"fragment" : "-Ofast"
-				},
-				{
-					"backtrace" : 3,
-					"fragment" : "-fno-var-tracking-assignments"
 				}
 			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"path" : "E:/Git/Citrine5/Citrine5/Head"
 				},
 				{
-					"backtrace" : 5,
+					"backtrace" : 4,
 					"path" : "E:/include/eigen3"
 				}
 			],

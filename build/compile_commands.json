@@ -1,52 +1,52 @@
 [
 {
   "directory": "E:/Git/Citrine5/build",
-  "command": "E:\\Gnugcc\\mingw64\\bin\\g++.exe  @CMakeFiles/Citrine5.dir/includes_CXX.rsp -g -Ofast -fno-var-tracking-assignments -o CMakeFiles\\Citrine5.dir\\Cpp\\Add.cpp.obj -c E:\\Git\\Citrine5\\Citrine5\\Cpp\\Add.cpp",
+  "command": "E:\\Gnugcc\\mingw64\\bin\\g++.exe  @CMakeFiles/Citrine5.dir/includes_CXX.rsp -g -Ofast -o CMakeFiles\\Citrine5.dir\\Cpp\\Add.cpp.obj -c E:\\Git\\Citrine5\\Citrine5\\Cpp\\Add.cpp",
   "file": "E:/Git/Citrine5/Citrine5/Cpp/Add.cpp"
 },
 {
   "directory": "E:/Git/Citrine5/build",
-  "command": "E:\\Gnugcc\\mingw64\\bin\\g++.exe  @CMakeFiles/Citrine5.dir/includes_CXX.rsp -g -Ofast -fno-var-tracking-assignments -o CMakeFiles\\Citrine5.dir\\Cpp\\BC.cpp.obj -c E:\\Git\\Citrine5\\Citrine5\\Cpp\\BC.cpp",
+  "command": "E:\\Gnugcc\\mingw64\\bin\\g++.exe  @CMakeFiles/Citrine5.dir/includes_CXX.rsp -g -Ofast -o CMakeFiles\\Citrine5.dir\\Cpp\\BC.cpp.obj -c E:\\Git\\Citrine5\\Citrine5\\Cpp\\BC.cpp",
   "file": "E:/Git/Citrine5/Citrine5/Cpp/BC.cpp"
 },
 {
   "directory": "E:/Git/Citrine5/build",
-  "command": "E:\\Gnugcc\\mingw64\\bin\\g++.exe  @CMakeFiles/Citrine5.dir/includes_CXX.rsp -g -Ofast -fno-var-tracking-assignments -o CMakeFiles\\Citrine5.dir\\Cpp\\Fiber.cpp.obj -c E:\\Git\\Citrine5\\Citrine5\\Cpp\\Fiber.cpp",
+  "command": "E:\\Gnugcc\\mingw64\\bin\\g++.exe  @CMakeFiles/Citrine5.dir/includes_CXX.rsp -g -Ofast -o CMakeFiles\\Citrine5.dir\\Cpp\\Fiber.cpp.obj -c E:\\Git\\Citrine5\\Citrine5\\Cpp\\Fiber.cpp",
   "file": "E:/Git/Citrine5/Citrine5/Cpp/Fiber.cpp"
 },
 {
   "directory": "E:/Git/Citrine5/build",
-  "command": "E:\\Gnugcc\\mingw64\\bin\\g++.exe  @CMakeFiles/Citrine5.dir/includes_CXX.rsp -g -Ofast -fno-var-tracking-assignments -o CMakeFiles\\Citrine5.dir\\Cpp\\Fx.cpp.obj -c E:\\Git\\Citrine5\\Citrine5\\Cpp\\Fx.cpp",
+  "command": "E:\\Gnugcc\\mingw64\\bin\\g++.exe  @CMakeFiles/Citrine5.dir/includes_CXX.rsp -g -Ofast -o CMakeFiles\\Citrine5.dir\\Cpp\\Fx.cpp.obj -c E:\\Git\\Citrine5\\Citrine5\\Cpp\\Fx.cpp",
   "file": "E:/Git/Citrine5/Citrine5/Cpp/Fx.cpp"
 },
 {
   "directory": "E:/Git/Citrine5/build",
-  "command": "E:\\Gnugcc\\mingw64\\bin\\g++.exe  @CMakeFiles/Citrine5.dir/includes_CXX.rsp -g -Ofast -fno-var-tracking-assignments -o CMakeFiles\\Citrine5.dir\\Cpp\\Iterator.cpp.obj -c E:\\Git\\Citrine5\\Citrine5\\Cpp\\Iterator.cpp",
+  "command": "E:\\Gnugcc\\mingw64\\bin\\g++.exe  @CMakeFiles/Citrine5.dir/includes_CXX.rsp -g -Ofast -o CMakeFiles\\Citrine5.dir\\Cpp\\Iterator.cpp.obj -c E:\\Git\\Citrine5\\Citrine5\\Cpp\\Iterator.cpp",
   "file": "E:/Git/Citrine5/Citrine5/Cpp/Iterator.cpp"
 },
 {
   "directory": "E:/Git/Citrine5/build",
-  "command": "E:\\Gnugcc\\mingw64\\bin\\g++.exe  @CMakeFiles/Citrine5.dir/includes_CXX.rsp -g -Ofast -fno-var-tracking-assignments -o CMakeFiles\\Citrine5.dir\\Cpp\\Jacobian.cpp.obj -c E:\\Git\\Citrine5\\Citrine5\\Cpp\\Jacobian.cpp",
+  "command": "E:\\Gnugcc\\mingw64\\bin\\g++.exe  @CMakeFiles/Citrine5.dir/includes_CXX.rsp -g -Ofast -o CMakeFiles\\Citrine5.dir\\Cpp\\Jacobian.cpp.obj -c E:\\Git\\Citrine5\\Citrine5\\Cpp\\Jacobian.cpp",
   "file": "E:/Git/Citrine5/Citrine5/Cpp/Jacobian.cpp"
 },
 {
   "directory": "E:/Git/Citrine5/build",
-  "command": "E:\\Gnugcc\\mingw64\\bin\\g++.exe  @CMakeFiles/Citrine5.dir/includes_CXX.rsp -g -Ofast -fno-var-tracking-assignments -o CMakeFiles\\Citrine5.dir\\Cpp\\Load.cpp.obj -c E:\\Git\\Citrine5\\Citrine5\\Cpp\\Load.cpp",
+  "command": "E:\\Gnugcc\\mingw64\\bin\\g++.exe  @CMakeFiles/Citrine5.dir/includes_CXX.rsp -g -Ofast -o CMakeFiles\\Citrine5.dir\\Cpp\\Load.cpp.obj -c E:\\Git\\Citrine5\\Citrine5\\Cpp\\Load.cpp",
   "file": "E:/Git/Citrine5/Citrine5/Cpp/Load.cpp"
 },
 {
   "directory": "E:/Git/Citrine5/build",
-  "command": "E:\\Gnugcc\\mingw64\\bin\\g++.exe  @CMakeFiles/Citrine5.dir/includes_CXX.rsp -g -Ofast -fno-var-tracking-assignments -o CMakeFiles\\Citrine5.dir\\Cpp\\MNQ.cpp.obj -c E:\\Git\\Citrine5\\Citrine5\\Cpp\\MNQ.cpp",
+  "command": "E:\\Gnugcc\\mingw64\\bin\\g++.exe  @CMakeFiles/Citrine5.dir/includes_CXX.rsp -g -Ofast -o CMakeFiles\\Citrine5.dir\\Cpp\\MNQ.cpp.obj -c E:\\Git\\Citrine5\\Citrine5\\Cpp\\MNQ.cpp",
   "file": "E:/Git/Citrine5/Citrine5/Cpp/MNQ.cpp"
 },
 {
   "directory": "E:/Git/Citrine5/build",
-  "command": "E:\\Gnugcc\\mingw64\\bin\\g++.exe  @CMakeFiles/Citrine5.dir/includes_CXX.rsp -g -Ofast -fno-var-tracking-assignments -o CMakeFiles\\Citrine5.dir\\Cpp\\ReadOut.cpp.obj -c E:\\Git\\Citrine5\\Citrine5\\Cpp\\ReadOut.cpp",
+  "command": "E:\\Gnugcc\\mingw64\\bin\\g++.exe  @CMakeFiles/Citrine5.dir/includes_CXX.rsp -g -Ofast -o CMakeFiles\\Citrine5.dir\\Cpp\\ReadOut.cpp.obj -c E:\\Git\\Citrine5\\Citrine5\\Cpp\\ReadOut.cpp",
   "file": "E:/Git/Citrine5/Citrine5/Cpp/ReadOut.cpp"
 },
 {
   "directory": "E:/Git/Citrine5/build",
-  "command": "E:\\Gnugcc\\mingw64\\bin\\g++.exe  @CMakeFiles/Citrine5.dir/includes_CXX.rsp -g -Ofast -fno-var-tracking-assignments -o CMakeFiles\\Citrine5.dir\\Cpp\\main.cpp.obj -c E:\\Git\\Citrine5\\Citrine5\\Cpp\\main.cpp",
+  "command": "E:\\Gnugcc\\mingw64\\bin\\g++.exe  @CMakeFiles/Citrine5.dir/includes_CXX.rsp -g -Ofast -o CMakeFiles\\Citrine5.dir\\Cpp\\main.cpp.obj -c E:\\Git\\Citrine5\\Citrine5\\Cpp\\main.cpp",
   "file": "E:/Git/Citrine5/Citrine5/Cpp/main.cpp"
 }
 ]
