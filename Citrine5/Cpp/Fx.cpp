@@ -1000,7 +1000,7 @@ VectorXd Fx::fx()
     VectorXd BCtemp0(5);
     VectorXd BCtemp1(5);
 
-    BCtemp0(0) = Y0new(0) - Vt1*cos(Y0new(7))*cos(Y0new(6)) + Vt2*sin(Y0new(7))*cos(Y0new(6)) + Vt3*sin(Y0new(6));
+    BCtemp0(0) = Y0new(0) - Vt1*cos(Y0new(6))*cos(Y0new(7)) + Vt2*sin(Y0new(7))*cos(Y0new(6)) + Vt3*sin(Y0new(6));
     BCtemp0(1) = Y0new(1) - Vt2*cos(Y0new(7)) - Vt1*sin(Y0new(7));
     BCtemp0(2) = Y0new(2) - Vt1*sin(Y0new(6))*cos(Y0new(7)) + Vt2*sin(Y0new(7))*sin(Y0new(6)) - Vt3*cos(Y0new(6));
     BCtemp0(3) = Y0new(8);

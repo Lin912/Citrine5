@@ -13,7 +13,7 @@ gg = Trans*g;
 hdr1 = 0.5*rho*Cdn*Sdn*v*(v^2+w^2)^(1/2);
 hdr2 = 0.5*rho*Cdb*Sdb*w*(v^2+w^2)^(1/2);
 
-f = t + gg;
+f = t - gg;
 % f(2) = f(2) + hdr1;
 % f(3) = f(3) + hdr2;
 f(4) = Omega2;

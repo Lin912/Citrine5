@@ -60,8 +60,8 @@ VectorXd Add::Addyold()
     point00(0) = Vt1*cos(Yold(6))*cos(Yold(7)) - Vt2*sin(Yold(7))*cos(Yold(6)) - Vt3*sin(Yold(6));          //速度u边界条件（上）
     point00(1) = Vt2*cos(Yold(7)) + Vt1*sin(Yold(7));          //速度V边界条件
     point00(2) = Vt1*sin(Yold(6))*cos(Yold(7)) - Vt2*sin(Yold(7))*sin(Yold(6)) + Vt3*cos(Yold(6));            //速度w边界条件
-
     VectorXd point01(2);
+
     point01(0) = 0;              //O2mega边界条件（上）
     point01(1) = 0;              //O3mega边界条件
 
@@ -75,7 +75,7 @@ VectorXd Add::Addyold()
     point02(0) =  Gx*cos(Yold(496))*cos(Yold(497)) - Gy*sin(Yold(497))*cos(Yold(496)) - Gz*sin(Yold(496));
     point02(1) =  Gy*cos(Yold(497)) + Gx*sin(Yold(497));
     point02(2) =  Gx*sin(Yold(496))*cos(Yold(497)) - Gy*sin(Yold(497))*sin(Yold(496)) + Gz*cos(Yold(496));
-    
+
     VectorXd point03(2);
     point03(0) = 0;              //O2mega边界条件（下）
     point03(1) = 0;              //O3mega边界条件
@@ -89,7 +89,6 @@ VectorXd Add::Addyold()
 
     temp.segment(490, 3) = Yold.segment(490, 3);
     temp.segment(493, 3) = point02;
-
     temp.segment(496, 2) = Yold.segment(496, 2);
     temp.tail(2) = point03;
 
@@ -130,9 +129,9 @@ VectorXd Add::Addynew()
 
 
     temp.segment(10, 480) = Ynew.segment(10, 480);
-    temp.segment(490, 3) = Ynew.segment(490,3);
-    temp.segment(493, 3) = point02;
 
+    temp.segment(490, 3) = Ynew.segment(490, 3);
+    temp.segment(493, 3) = point02;
     temp.segment(496, 2) = Ynew.segment(496, 2);
     temp.tail(2) = point03;
 
