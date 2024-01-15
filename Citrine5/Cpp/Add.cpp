@@ -61,9 +61,9 @@ VectorXd Add::Addyold()
     point00(1) = Vt2*cos(Yold(7)) + Vt1*sin(Yold(7));          //速度V边界条件
     point00(2) = Vt1*sin(Yold(6))*cos(Yold(7)) - Vt2*sin(Yold(7))*sin(Yold(6)) + Vt3*cos(Yold(6));            //速度w边界条件
     VectorXd point01(2);
-
     point01(0) = 0;              //O2mega边界条件（上）
     point01(1) = 0;              //O3mega边界条件
+
 
     // VectorXd point02(3);
     // point02(0) = Vb1*cos(Yold(496))*cos(Yold(497)) - Vb2*sin(Yold(497))*cos(Yold(496)) - Vb3*sin(Yold(496));          //速度T边界条件（下）
