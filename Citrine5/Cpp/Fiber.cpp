@@ -45,7 +45,7 @@ void FiberMain::Calculation(int index)
             a(i*10 + 1) = 0.002;    //v
             a(i*10 + 2) = 0;    //w
 
-            a(i*10 + 3) = 0.001;   //T
+            a(i*10 + 3) = 0;   //T
             a(i*10 + 4) = 0;    //Sn
             a(i*10 + 5) = 0;    //Sb
 
@@ -55,7 +55,7 @@ void FiberMain::Calculation(int index)
             a(i*10 + 8) = 0.00001;    //O2mega
             a(i*10 + 9) = 0.00001;    //O3mega
         }
-        a(493) = 1.0;
+        a(493) = 30.0;
         TransVal = a;
     }
 

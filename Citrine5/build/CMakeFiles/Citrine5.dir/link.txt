@@ -1,3 +1,0 @@
-D:\Cmake\bin\cmake.exe -E rm -f CMakeFiles\Citrine5.dir/objects.a
-E:\Gnugcc\mingw64\bin\ar.exe qc CMakeFiles\Citrine5.dir/objects.a @CMakeFiles\Citrine5.dir\objects1.rsp
-E:\Gnugcc\mingw64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\Citrine5.dir/objects.a -Wl,--no-whole-archive -o Citrine5.exe -Wl,--out-implib,libCitrine5.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Citrine5.dir\linklibs.rsp
