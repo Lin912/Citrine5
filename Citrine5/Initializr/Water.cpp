@@ -26,8 +26,8 @@ int main()
     for(int i = 0; i < TimeStep; i++)
     {
         b(i, 0) = 0;
-        b(i, 1) = 0;
-        b(i, 2) = 0;
+        b(i, 1) = 0.0005;
+        b(i, 2) = 0.0005;
     }
 
     ofstream dataFile;

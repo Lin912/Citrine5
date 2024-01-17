@@ -40,7 +40,6 @@ void Iterator::begin (int k)
     fx = load.LF(k);//装载 F(x)
     jac = load.LJ(k);//装载 Jacobi(x)
 
-    savetxt(jac, ".././Data./loadjac.txt");                //Jacobian输出项，节点的v和w不能同时为0
     //*******************************************//
 
 
@@ -66,6 +65,7 @@ void Iterator::begin (int k)
         Ynew += deltaY;//更新单元
         Yold = temp;
         
+        savetxt(jac, ".././Data./loadjac.txt");                //Jacobian输出项，节点的v和w不能同时为0
         savetxt(fx, ".././Data./fx.txt");
         savetxt(deltaY, ".././Data./deltaY.txt");
 
