@@ -9,7 +9,7 @@ using namespace std;
 void function0();
 int main()
 {
-    int TimeStep = 2800;
+    int TimeStep = 2000;
     int timeforCitrine5 = 0;
 
     while(1)
@@ -90,7 +90,7 @@ void function0()
     printf("Data in Citrine\n");
 
     FILE* file = fopen("../control./judge.txt", "w");
-    fprintf(file, "1");
+    fprintf(file, "0");
     fclose(file);
 }
 

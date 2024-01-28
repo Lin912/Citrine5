@@ -82,13 +82,13 @@ VectorXd Add::Addyold()
     point03(0) = 0;              //O2mega边界条件（下）
     point03(1) = 0;              //O3mega边界条件
 
+
+
     temp.segment(0,3) = point00;
     temp.segment(3,5) = Yold.segment(3, 5);
     temp.segment(8,2) = point01;
 
-
     temp.segment(10, 480) = Yold.segment(10, 480);
-
 
     // temp.segment(490, 3) = point02;
     // temp.segment(493, 5) = Yold.segment(493, 5);
