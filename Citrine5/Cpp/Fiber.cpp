@@ -2,7 +2,7 @@
 
 FiberMain::FiberMain()
 {
-    times = 200;        //内部迭代次数
+    times = 50;        //内部迭代次数
     Error = 5e-08;      //内部容许误差
     Nodes = 50;
     variable = 10;

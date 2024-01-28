@@ -9,37 +9,11 @@ using namespace std;
 void function0();
 int main()
 {
-    int TimeStep = 1;
+    int TimeStep = 2800;
     int timeforCitrine5 = 0;
 
     while(1)
     {    
-        // for(int i = 0; i < TimeStep; i++)
-        // {
-        //     int n = -1;
-        //     FILE* file = fopen("../control./judge.txt", "r");
-        //     fscanf(file, "%d", &n);
-        //     fclose(file);
-
-        //     if(n == 0)
-        //     {
-        //     printf("Data in Citrine\n");  
-
-        //     FiberMain aa;
-        //     aa.Calculation(timeforCitrine5);
-        //     cout << endl;              
-        //     cout <<"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
-        //     cout << endl;
-        //     function0();
-
-        //     timeforCitrine5++ ;
-        //     }
-        //     else
-        //     {
-        //         break;
-        //     }
-        // }
-
         for(int i = 0; i < TimeStep; i++)
         {
             int n = -1;
@@ -48,30 +22,56 @@ int main()
             fclose(file);
 
             if(n == 0)
-            {   
-                printf("Data in Citrine\n");  
-
-                FiberMain aa;
-                aa.Calculation(timeforfiber);//0开始
-                // aa.Calculation((i - 1) / 2);//1开始
-
-                cout << endl;              
-                cout <<"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
-                cout << endl;
-                
-                function0();
-
-                timeforfiber++ ;
-            }
-            else if(n == 1)
             {
-                function1();
+            printf("Data in Citrine\n");  
+
+            FiberMain aa;
+            aa.Calculation(timeforCitrine5);
+            cout << endl;              
+            cout <<"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+            cout << endl;
+            function0();
+
+            timeforCitrine5++ ;
             }
-            else if(n ==2)
+            else
             {
-                function2();
+                break;
             }
         }
+
+        // for(int i = 0; i < TimeStep; i++)
+        // {
+        //     int n = -1;
+        //     FILE* file = fopen("../control./judge.txt", "r");
+        //     fscanf(file, "%d", &n);
+        //     fclose(file);
+
+        //     if(n == 0)
+        //     {   
+        //         printf("Data in Citrine\n");  
+
+        //         FiberMain aa;
+        //         aa.Calculation(timeforfiber);//0开始
+        //         // aa.Calculation((i - 1) / 2);//1开始
+
+        //         cout << endl;              
+        //         cout <<"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+        //         cout << endl;
+                
+        //         function0();
+
+        //         timeforfiber++ ;
+        //     }
+        //     else if(n == 1)
+        //     {
+        //         function1();
+        //     }
+        //     else if(n ==2)
+        //     {
+        //         function2();
+        //     }
+        // }
 
     }
     return 0;
