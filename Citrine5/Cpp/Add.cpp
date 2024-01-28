@@ -72,9 +72,11 @@ VectorXd Add::Addyold()
 
 
     VectorXd point02(3);
+    double Sdn = 0.003162;
+    double Sdb = 0.003162;
     point02(0) =  Gx*cos(Yold(496))*cos(Yold(497)) - Gy*sin(Yold(497))*cos(Yold(496)) - Gz*sin(Yold(496));
-    point02(1) =  Gy*cos(Yold(497)) + Gx*sin(Yold(497));
-    point02(2) =  Gx*sin(Yold(496))*cos(Yold(497)) - Gy*sin(Yold(497))*sin(Yold(496)) + Gz*cos(Yold(496));
+    point02(1) =  Gy*cos(Yold(497)) + Gx*sin(Yold(497)) + 0.5*rho*Cdn*Sdn*Yold(491)*sqrt(pow(Yold(491),2)+pow(Yold(492),2));
+    point02(2) =  Gx*sin(Yold(496))*cos(Yold(497)) - Gy*sin(Yold(497))*sin(Yold(496)) + Gz*cos(Yold(496)) + 0.5*rho*Cdb*Sdb*Yold(492)*sqrt(pow(Yold(491),2)+pow(Yold(492),2));
 
     VectorXd point03(2);
     point03(0) = 0;              //O2mega边界条件（下）
@@ -123,9 +125,11 @@ VectorXd Add::Addynew()
 
     //(VG)
     VectorXd point02(3);
+    double Sdn = 0.003162;
+    double Sdb = 0.003162;
     point02(0) =  Gx*cos(Ynew(496))*cos(Ynew(497)) - Gy*sin(Ynew(497))*cos(Ynew(496)) - Gz*sin(Ynew(496));
-    point02(1) =  Gy*cos(Ynew(497)) + Gx*sin(Ynew(497));
-    point02(2) =  Gx*sin(Ynew(496))*cos(Ynew(497)) - Gy*sin(Ynew(497))*sin(Ynew(496)) + Gz*cos(Ynew(496));
+    point02(1) =  Gy*cos(Ynew(497)) + Gx*sin(Ynew(497)) + 0.5*rho*Cdn*Sdn*Ynew(491)*sqrt(pow(Ynew(491),2)+pow(Ynew(492),2));
+    point02(2) =  Gx*sin(Ynew(496))*cos(Ynew(497)) - Gy*sin(Ynew(497))*sin(Ynew(496)) + Gz*cos(Ynew(496)) + 0.5*rho*Cdb*Sdb*Ynew(492)*sqrt(pow(Ynew(491),2)+pow(Ynew(492),2));
 
 
     VectorXd point03(2);

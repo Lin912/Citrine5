@@ -118,6 +118,9 @@ MatrixXd Jacobian::jacobian()
     
 
     //BC49
+    double Sdn = 0.003162;
+    double Sdb = 0.003162;
+
     temp(495, 490) = 0;
     temp(495, 491) = 0;
     temp(495, 492) = 0;
@@ -130,8 +133,8 @@ MatrixXd Jacobian::jacobian()
     temp(495, 499) = 0;
 
     temp(496, 490) = 0;
-    temp(496, 491) = 0;
-    temp(496, 492) = 0;
+    temp(496, 491) = (Cdn*Sdn*rho*sqrt(pow(Ynew(491),2) + pow(Ynew(492),2)))/2 + (Cdn*Sdn*rho*pow(Ynew(491),2))/(2*sqrt(pow(Ynew(491),2) + pow(Ynew(492),2)));
+    temp(496, 492) = (Cdn*Sdn*rho*Ynew(491)*Ynew(492))/(2*sqrt(pow(Ynew(491),2) + pow(Ynew(492),2)));
     temp(496, 493) = 0;
     temp(496, 494) = 1;
     temp(496, 495) = 0;
@@ -141,8 +144,8 @@ MatrixXd Jacobian::jacobian()
     temp(496, 499) = 0;
 
     temp(497, 490) = 0;
-    temp(497, 491) = 0;
-    temp(497, 492) = 0;
+    temp(497, 491) = (Cdb*Sdb*rho*Ynew(491)*Ynew(492))/(2*sqrt(pow(Ynew(491),2) + pow(Ynew(492),2)));
+    temp(497, 492) = (Cdb*Sdb*rho*sqrt(pow(Ynew(491),2) + pow(Ynew(492),2)))/2 + (Cdb*Sdb*rho*pow(Ynew(492),2))/(2*sqrt(pow(Ynew(491),2) + pow(Ynew(492),2)));
     temp(497, 493) = 0;
     temp(497, 494) = 0;
     temp(497, 495) = 1;
