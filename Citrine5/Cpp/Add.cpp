@@ -65,16 +65,16 @@ VectorXd Add::Addyold()
     point01(1) = 0;              //O3mega边界条件
 
 
-    VectorXd point02(3);
-    point02(0) = Vb1*cos(Yold(496))*cos(Yold(497)) - Vb2*sin(Yold(497))*cos(Yold(496)) - Vb3*sin(Yold(496));          //速度T边界条件（下）
-    point02(1) = Vb2*cos(Yold(497)) + Vb1*sin(Yold(497));          //速度Sn边界条件
-    point02(2) = Vb1*sin(Yold(496))*cos(Yold(497)) - Vb2*sin(Yold(497))*sin(Yold(496)) + Vb3*cos(Yold(496));             //速度Sb边界条件
-
-
     // VectorXd point02(3);
-    // point02(0) =  Gx*cos(Yold(496))*cos(Yold(497)) - Gy*sin(Yold(497))*cos(Yold(496)) - Gz*sin(Yold(496));
-    // point02(1) =  Gy*cos(Yold(497)) + Gx*sin(Yold(497));
-    // point02(2) =  Gx*sin(Yold(496))*cos(Yold(497)) - Gy*sin(Yold(497))*sin(Yold(496)) + Gz*cos(Yold(496));
+    // point02(0) = Vb1*cos(Yold(496))*cos(Yold(497)) - Vb2*sin(Yold(497))*cos(Yold(496)) - Vb3*sin(Yold(496));          //速度T边界条件（下）
+    // point02(1) = Vb2*cos(Yold(497)) + Vb1*sin(Yold(497));          //速度Sn边界条件
+    // point02(2) = Vb1*sin(Yold(496))*cos(Yold(497)) - Vb2*sin(Yold(497))*sin(Yold(496)) + Vb3*cos(Yold(496));             //速度Sb边界条件
+
+
+    VectorXd point02(3);
+    point02(0) =  Gx*cos(Yold(496))*cos(Yold(497)) - Gy*sin(Yold(497))*cos(Yold(496)) - Gz*sin(Yold(496));
+    point02(1) =  Gy*cos(Yold(497)) + Gx*sin(Yold(497));
+    point02(2) =  Gx*sin(Yold(496))*cos(Yold(497)) - Gy*sin(Yold(497))*sin(Yold(496)) + Gz*cos(Yold(496));
 
     VectorXd point03(2);
     point03(0) = 0;              //O2mega边界条件（下）
@@ -88,14 +88,14 @@ VectorXd Add::Addyold()
     temp.segment(10, 480) = Yold.segment(10, 480);
 
 
-    temp.segment(490, 3) = point02;
-    temp.segment(493, 5) = Yold.segment(493, 5);
-    temp.tail(2) = point03;
-
-    // temp.segment(490, 3) = Yold.segment(490, 3);
-    // temp.segment(493, 3) = point02;
-    // temp.segment(496, 2) = Yold.segment(496, 2);
+    // temp.segment(490, 3) = point02;
+    // temp.segment(493, 5) = Yold.segment(493, 5);
     // temp.tail(2) = point03;
+
+    temp.segment(490, 3) = Yold.segment(490, 3);
+    temp.segment(493, 3) = point02;
+    temp.segment(496, 2) = Yold.segment(496, 2);
+    temp.tail(2) = point03;
 
     return temp;
 }
@@ -113,15 +113,19 @@ VectorXd Add::Addynew()
     point01(0) = 0;              //O2mega边界条件（上）
     point01(1) = 0;              //O3mega边界条件
 
-    VectorXd point02(3);
-    point02(0) = Vb1*cos(Ynew(496))*cos(Ynew(497)) - Vb2*sin(Ynew(497))*cos(Ynew(496)) - Vb3*sin(Ynew(496));           
-    point02(1) = Vb2*cos(Ynew(497)) + Vb1*sin(Ynew(497));
-    point02(2) = Vb1*sin(Ynew(496))*cos(Ynew(497)) - Vb2*sin(Ynew(497))*sin(Ynew(496)) + Vb3*cos(Ynew(496));
+    //Switch (VV) or (VG) 
 
+    //(VV)
     // VectorXd point02(3);
-    // point02(0) =  Gx*cos(Ynew(496))*cos(Ynew(497)) - Gy*sin(Ynew(497))*cos(Ynew(496)) - Gz*sin(Ynew(496));
-    // point02(1) =  Gy*cos(Ynew(497)) + Gx*sin(Ynew(497));
-    // point02(2) =  Gx*sin(Ynew(496))*cos(Ynew(497)) - Gy*sin(Ynew(497))*sin(Ynew(496)) + Gz*cos(Ynew(496));
+    // point02(0) = Vb1*cos(Ynew(496))*cos(Ynew(497)) - Vb2*sin(Ynew(497))*cos(Ynew(496)) - Vb3*sin(Ynew(496));           
+    // point02(1) = Vb2*cos(Ynew(497)) + Vb1*sin(Ynew(497));
+    // point02(2) = Vb1*sin(Ynew(496))*cos(Ynew(497)) - Vb2*sin(Ynew(497))*sin(Ynew(496)) + Vb3*cos(Ynew(496));
+
+    //(VG)
+    VectorXd point02(3);
+    point02(0) =  Gx*cos(Ynew(496))*cos(Ynew(497)) - Gy*sin(Ynew(497))*cos(Ynew(496)) - Gz*sin(Ynew(496));
+    point02(1) =  Gy*cos(Ynew(497)) + Gx*sin(Ynew(497));
+    point02(2) =  Gx*sin(Ynew(496))*cos(Ynew(497)) - Gy*sin(Ynew(497))*sin(Ynew(496)) + Gz*cos(Ynew(496));
 
 
     VectorXd point03(2);
@@ -135,14 +139,18 @@ VectorXd Add::Addynew()
 
     temp.segment(10, 480) = Ynew.segment(10, 480);
 
-    temp.segment(490, 3) = point02;
-    temp.segment(493, 5) = Ynew.segment(493, 5);
-    temp.tail(2) = point03;
+    //Switch (VV) or (VG) 
 
-    // temp.segment(490, 3) = Ynew.segment(490, 3);
-    // temp.segment(493, 3) = point02;
-    // temp.segment(496, 2) = Ynew.segment(496, 2);
+    //(VV)
+    // temp.segment(490, 3) = point02;
+    // temp.segment(493, 5) = Ynew.segment(493, 5);
     // temp.tail(2) = point03;
+
+    //(VG)
+    temp.segment(490, 3) = Ynew.segment(490, 3);
+    temp.segment(493, 3) = point02;
+    temp.segment(496, 2) = Ynew.segment(496, 2);
+    temp.tail(2) = point03;
 
     return temp;
 }

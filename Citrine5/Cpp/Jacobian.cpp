@@ -118,92 +118,36 @@ MatrixXd Jacobian::jacobian()
     
 
     //BC49
-    // temp(495, 490) = 0;
-    // temp(495, 491) = 0;
-    // temp(495, 492) = 0;
-    // temp(495, 493) = 1;
-    // temp(495, 494) = 0;
-    // temp(495, 495) = 0;
-    // temp(495, 496) = - Gy*sin(Ynew(497))*sin(Ynew(496)) + Gx*cos(Ynew(497))*sin(Ynew(496));  
-    // temp(495, 497) = Gz*cos(Ynew(497)) + Gy*cos(Ynew(497))*cos(Ynew(496)) + Gx*cos(Ynew(496))*sin(Ynew(497));
-    // temp(495, 498) = 0;
-    // temp(495, 499) = 0;
-
-    // temp(496, 490) = 0;
-    // temp(496, 491) = 0;
-    // temp(496, 492) = 0;
-    // temp(496, 493) = 0;
-    // temp(496, 494) = 1;
-    // temp(496, 495) = 0;
-    // temp(496, 496) = 0;
-    // temp(496, 497) = - Gx*cos(Ynew(497)) + Gy*sin(Ynew(497));
-    // temp(496, 498) = 0;
-    // temp(496, 499) = 0;
-
-    // temp(497, 490) = 0;
-    // temp(497, 491) = 0;
-    // temp(497, 492) = 0;
-    // temp(497, 493) = 0;
-    // temp(497, 494) = 0;
-    // temp(497, 495) = 1;
-    // temp(497, 496) = - Gx*cos(Ynew(497))*cos(Ynew(496)) + Gz*sin(Ynew(496)) + Gy*cos(Ynew(496))*sin(Ynew(497));
-    // temp(497, 497) = Gy*cos(Ynew(497))*sin(Ynew(496)) + Gx*sin(Ynew(497))*sin(Ynew(496));
-    // temp(497, 498) = 0;
-    // temp(497, 499) = 0;
-
-    // temp(498, 490) = 0;
-    // temp(498, 491) = 0;
-    // temp(498, 492) = 0;
-    // temp(498, 493) = 0;
-    // temp(498, 494) = 0;
-    // temp(498, 495) = 0;
-    // temp(498, 496) = 0;
-    // temp(498, 497) = 0;
-    // temp(498, 498) = 1;
-    // temp(498, 499) = 0;
-
-    // temp(499, 490) = 0;
-    // temp(499, 491) = 0;
-    // temp(499, 492) = 0;
-    // temp(499, 493) = 0;
-    // temp(499, 494) = 0;
-    // temp(499, 495) = 0;
-    // temp(499, 496) = 0;
-    // temp(499, 497) = 0;
-    // temp(499, 498) = 0;
-    // temp(499, 499) = 1;   
-
-
-    temp(495, 490) = 1;
+    temp(495, 490) = 0;
     temp(495, 491) = 0;
     temp(495, 492) = 0;
-    temp(495, 493) = 0;
+    temp(495, 493) = 1;
     temp(495, 494) = 0;
     temp(495, 495) = 0;
-    temp(495, 496) = - Vb2*sin(Ynew(497))*sin(Ynew(496)) + Vb1*cos(Ynew(497))*sin(Ynew(496));
-    temp(495, 497) = Vb3*cos(Ynew(497)) + Vb2*cos(Ynew(497))*cos(Ynew(496)) + Vb1*cos(Ynew(496))*sin(Ynew(497));
+    temp(495, 496) = - Gy*sin(Ynew(497))*sin(Ynew(496)) + Gx*cos(Ynew(497))*sin(Ynew(496));  
+    temp(495, 497) = Gz*cos(Ynew(497)) + Gy*cos(Ynew(497))*cos(Ynew(496)) + Gx*cos(Ynew(496))*sin(Ynew(497));
     temp(495, 498) = 0;
     temp(495, 499) = 0;
 
     temp(496, 490) = 0;
-    temp(496, 491) = 1;
+    temp(496, 491) = 0;
     temp(496, 492) = 0;
     temp(496, 493) = 0;
-    temp(496, 494) = 0;
+    temp(496, 494) = 1;
     temp(496, 495) = 0;
     temp(496, 496) = 0;
-    temp(496, 497) = - Vb1*cos(Ynew(497)) + Vb2*sin(Ynew(497));
+    temp(496, 497) = - Gx*cos(Ynew(497)) + Gy*sin(Ynew(497));
     temp(496, 498) = 0;
     temp(496, 499) = 0;
 
     temp(497, 490) = 0;
     temp(497, 491) = 0;
-    temp(497, 492) = 1;
+    temp(497, 492) = 0;
     temp(497, 493) = 0;
     temp(497, 494) = 0;
-    temp(497, 495) = 0;
-    temp(497, 496) = - Vb1*cos(Ynew(497))*cos(Ynew(496)) + Vb3*sin(Ynew(496)) + Vb2*cos(Ynew(496))*sin(Ynew(497));
-    temp(497, 497) = Vb2*cos(Ynew(497))*sin(Ynew(496)) + Vb1*sin(Ynew(497))*sin(Ynew(496));
+    temp(497, 495) = 1;
+    temp(497, 496) = - Gx*cos(Ynew(497))*cos(Ynew(496)) + Gz*sin(Ynew(496)) + Gy*cos(Ynew(496))*sin(Ynew(497));
+    temp(497, 497) = Gy*cos(Ynew(497))*sin(Ynew(496)) + Gx*sin(Ynew(497))*sin(Ynew(496));
     temp(497, 498) = 0;
     temp(497, 499) = 0;
 
@@ -227,7 +171,63 @@ MatrixXd Jacobian::jacobian()
     temp(499, 496) = 0;
     temp(499, 497) = 0;
     temp(499, 498) = 0;
-    temp(499, 499) = 1;
+    temp(499, 499) = 1;   
+
+
+    // temp(495, 490) = 1;
+    // temp(495, 491) = 0;
+    // temp(495, 492) = 0;
+    // temp(495, 493) = 0;
+    // temp(495, 494) = 0;
+    // temp(495, 495) = 0;
+    // temp(495, 496) = - Vb2*sin(Ynew(497))*sin(Ynew(496)) + Vb1*cos(Ynew(497))*sin(Ynew(496));
+    // temp(495, 497) = Vb3*cos(Ynew(497)) + Vb2*cos(Ynew(497))*cos(Ynew(496)) + Vb1*cos(Ynew(496))*sin(Ynew(497));
+    // temp(495, 498) = 0;
+    // temp(495, 499) = 0;
+
+    // temp(496, 490) = 0;
+    // temp(496, 491) = 1;
+    // temp(496, 492) = 0;
+    // temp(496, 493) = 0;
+    // temp(496, 494) = 0;
+    // temp(496, 495) = 0;
+    // temp(496, 496) = 0;
+    // temp(496, 497) = - Vb1*cos(Ynew(497)) + Vb2*sin(Ynew(497));
+    // temp(496, 498) = 0;
+    // temp(496, 499) = 0;
+
+    // temp(497, 490) = 0;
+    // temp(497, 491) = 0;
+    // temp(497, 492) = 1;
+    // temp(497, 493) = 0;
+    // temp(497, 494) = 0;
+    // temp(497, 495) = 0;
+    // temp(497, 496) = - Vb1*cos(Ynew(497))*cos(Ynew(496)) + Vb3*sin(Ynew(496)) + Vb2*cos(Ynew(496))*sin(Ynew(497));
+    // temp(497, 497) = Vb2*cos(Ynew(497))*sin(Ynew(496)) + Vb1*sin(Ynew(497))*sin(Ynew(496));
+    // temp(497, 498) = 0;
+    // temp(497, 499) = 0;
+
+    // temp(498, 490) = 0;
+    // temp(498, 491) = 0;
+    // temp(498, 492) = 0;
+    // temp(498, 493) = 0;
+    // temp(498, 494) = 0;
+    // temp(498, 495) = 0;
+    // temp(498, 496) = 0;
+    // temp(498, 497) = 0;
+    // temp(498, 498) = 1;
+    // temp(498, 499) = 0;
+
+    // temp(499, 490) = 0;
+    // temp(499, 491) = 0;
+    // temp(499, 492) = 0;
+    // temp(499, 493) = 0;
+    // temp(499, 494) = 0;
+    // temp(499, 495) = 0;
+    // temp(499, 496) = 0;
+    // temp(499, 497) = 0;
+    // temp(499, 498) = 0;
+    // temp(499, 499) = 1;
     
 
 //Block01    
