@@ -1,2 +1,2 @@
 Across Area,Density of water,Cable section diameter,Modulus of elasticity,2-order moments of cross-section,Mass of element,Additional mass of element,Weight of element,Cdt,Cdn,Cdb,pi,Gravity
-3.14E-4,1025,0.0225,3.489E6,7.8E-09,0.1136,0.0628,-1.114416,-0.01,-1.2,-1.2,3.1415926,-9.81
+3.976e-4,1025,0.0225,3.489E6,-1.1303E-08,0.052,0.03601,-0.15613,-0.01,-1.2,-1.2,3.1415926,-9.81
