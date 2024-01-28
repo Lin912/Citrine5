@@ -31,7 +31,7 @@ set(CMAKE_MT "")
 set(CMAKE_COMPILER_IS_GNUCXX 1)
 set(CMAKE_CXX_COMPILER_LOADED 1)
 set(CMAKE_CXX_COMPILER_WORKS TRUE)
-set(CMAKE_CXX_ABI_COMPILED 0)
+set(CMAKE_CXX_ABI_COMPILED TRUE)
 
 set(CMAKE_CXX_COMPILER_ENV_VAR "CXX")
 
@@ -51,9 +51,9 @@ set(CMAKE_CXX_LINKER_PREFERENCE 30)
 set(CMAKE_CXX_LINKER_PREFERENCE_PROPAGATES 1)
 
 # Save compiler ABI information.
-set(CMAKE_CXX_SIZEOF_DATA_PTR "")
+set(CMAKE_CXX_SIZEOF_DATA_PTR "8")
 set(CMAKE_CXX_COMPILER_ABI "")
-set(CMAKE_CXX_BYTE_ORDER "")
+set(CMAKE_CXX_BYTE_ORDER "LITTLE_ENDIAN")
 set(CMAKE_CXX_LIBRARY_ARCHITECTURE "")
 
 if(CMAKE_CXX_SIZEOF_DATA_PTR)
@@ -77,7 +77,7 @@ endif()
 
 
 
-set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "")
-set(CMAKE_CXX_IMPLICIT_LINK_LIBRARIES "")
-set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "")
+set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "E:/Gnugcc/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++;E:/Gnugcc/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32;E:/Gnugcc/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward;E:/Gnugcc/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include;E:/Gnugcc/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed;E:/Gnugcc/mingw64/x86_64-w64-mingw32/include")
+set(CMAKE_CXX_IMPLICIT_LINK_LIBRARIES "stdc++;mingw32;gcc_s;gcc;moldname;mingwex;advapi32;shell32;user32;kernel32;iconv;mingw32;gcc_s;gcc;moldname;mingwex")
+set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "E:/Gnugcc/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0;E:/Gnugcc/mingw64/lib/gcc;E:/Gnugcc/mingw64/x86_64-w64-mingw32/lib;E:/Gnugcc/mingw64/lib")
 set(CMAKE_CXX_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")
