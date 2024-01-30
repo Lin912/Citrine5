@@ -15,7 +15,7 @@ int main()
     int variable = 10;
     int TV = 500;                                                //总变量数TV= Nodes * variable
     int TimeStep = 2000;                                         //总时间步数
-    double DelTime = 0.005;                                      //时间步长(真实时间步长)
+    double DelTime = 0.002;                                      //时间步长(真实时间步长)
     double pi = 3.1415926;
 
     MatrixXd a(TimeStep, TV);

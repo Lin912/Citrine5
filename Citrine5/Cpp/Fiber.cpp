@@ -2,13 +2,13 @@
 
 FiberMain::FiberMain()
 {
-    times = 50;        //内部迭代次数
+    times = 200;        //内部迭代次数
     Error = 5e-08;      //内部容许误差
     Nodes = 50;
     variable = 10;
     TotNoV = 500;
     TimeStep = 2000;
-    DelTime = 0.005;
+    DelTime = 0.002;
 }
 
 FiberMain::~FiberMain()
@@ -49,8 +49,8 @@ void FiberMain::Calculation(int index)
             a(i*10 + 4) = 0;    //Sn
             a(i*10 + 5) = 0;    //Sb
 
-            a(i*10 + 6) = 0.00001;    //Theta
-            a(i*10 + 7) = 0.00001;    //Phi
+            a(i*10 + 6) = 0.00001;    //phi
+            a(i*10 + 7) = 0.00001;    //theta
 
             a(i*10 + 8) = 0.00001;    //O2mega
             a(i*10 + 9) = 0.00001;    //O3mega

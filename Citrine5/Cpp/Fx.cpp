@@ -1012,8 +1012,8 @@ VectorXd Fx::fx()
     double Sdn = 0.003162;
     double Sdb = 0.003162;
     BCtemp1(0) = Y49new(3) - Gx*cos(Y49new(6))*cos(Y49new(7)) + Gy*sin(Y49new(7))*cos(Y49new(6)) + Gz*sin(Y49new(6));
-    BCtemp1(1) = Y49new(4) - Gy*cos(Y49new(7)) - Gx*sin(Y49new(7)) - 0.5*rho*Cdn*Sdn*Y49new(1)*sqrt(pow(Y49new(1),2)+pow(Y49new(2),2));
-    BCtemp1(2) = Y49new(5) - Gx*sin(Y49new(6))*cos(Y49new(7)) + Gy*sin(Y49new(7))*sin(Y49new(6)) - Gz*cos(Y49new(6)) - 0.5*rho*Cdb*Sdb*Y49new(2)*sqrt(pow(Y49new(1),2)+pow(Y49new(2),2));
+    BCtemp1(1) = Y49new(4) - Gy*cos(Y49new(7)) - Gx*sin(Y49new(7));
+    BCtemp1(2) = Y49new(5) - Gx*sin(Y49new(6))*cos(Y49new(7)) + Gy*sin(Y49new(7))*sin(Y49new(6)) - Gz*cos(Y49new(6));
     BCtemp1(3) = Y49new(8);
     BCtemp1(4) = Y49new(9);
 
