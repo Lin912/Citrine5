@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0.0)
+cmake_minimum_required(VERSION 3.15)
 project(Citrine5)
 
 #add_definitions(-Ofast)
@@ -9,7 +9,7 @@ find_package(eigen3)
 
 include_directories(Head)
 include_directories(${EIGEN3_INCLUDE_DIR})
-message(${EIGEN3_INCLUDE_DIR})
+# message(${EIGEN3_INCLUDE_DIR})
 
 aux_source_directory(Cpp srcs)
 add_executable(${PROJECT_NAME} ${srcs})

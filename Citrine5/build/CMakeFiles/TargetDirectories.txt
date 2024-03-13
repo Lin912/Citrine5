@@ -1,3 +1,0 @@
-E:/Git/Citrine5/Citrine5/build/CMakeFiles/Citrine5.dir
-E:/Git/Citrine5/Citrine5/build/CMakeFiles/edit_cache.dir
-E:/Git/Citrine5/Citrine5/build/CMakeFiles/rebuild_cache.dir
