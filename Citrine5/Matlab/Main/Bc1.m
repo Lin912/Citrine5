@@ -1,9 +1,9 @@
-syms Theta Phi V1 V2 V3 u v w;
+syms Theta Phi Vx Vy Vz u v w;
 syms Omega2 Omega3;
 syms T Sn Sb;
 
-Trans = [cos(Theta)*cos(Phi),-cos(Theta)*sin(Phi),-sin(Phi);sin(Phi),cos(Phi),0;sin(Theta)*cos(Phi),-sin(Theta)*sin(Phi),cos(Theta)];
-V0 = [V1;V2;V3];
+Trans = [cos(Theta)*cos(Phi),-sin(Phi),cos(Phi)*sin(Theta);cos(Theta)*sin(Phi),cos(Phi),sin(Phi)*sin(Theta);-sin(Theta),0,cos(Theta)];
+V0 = [Vz;Vx;Vy];
 u0 = [u;v;w];
 f = u0-Trans*V0;
 f(4) = Omega2;

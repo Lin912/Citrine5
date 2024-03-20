@@ -26,9 +26,9 @@ class Fx
         // double G;
         // double Ip;
 
-        double V1;//Velocity of water
-        double V2;
-        double V3;
+        double Vz;//Velocity of water
+        double Vx;
+        double Vy;
 
         //质量特性
         double M;//质量 M = RhoCable*▽ = RhoCable*A*diameter(计算长度)
@@ -42,13 +42,14 @@ class Fx
         double pi;
         double g;
 
-        double Vt1;
-        double Vt2;
-        double Vt3;
+        double Vtx;
+        double Vty;
+        double Vtz;
 
-        double Vb1;
-        double Vb2;
-        double Vb3;
+        double Vbx;
+        double Vby;
+        double Vbz;
+
 
         double deltaT;
         double deltaS;

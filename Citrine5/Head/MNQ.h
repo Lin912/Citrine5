@@ -23,9 +23,9 @@ class MNQ
         // double G;
         // double Ip;
 
-        double V1;//Velocity of water
-        double V2;
-        double V3;
+        double Vx;//Velocity of water
+        double Vy;
+        double Vz;
 
         //质量特性
         double M;//质量 M = RhoCable*▽ = RhoCable*A*diameter(计算长度)

@@ -37,25 +37,26 @@ void FiberMain::Calculation(int index)
     }
     else
     {   
+        //Initial Value
         VectorXd a(TotNoV);
         a.Zero(TotNoV);
         for(int i = 0; i < Nodes; i++)
         {
-            a(i*10 + 0) = 0;    //u
-            a(i*10 + 1) = 0.002;    //v
-            a(i*10 + 2) = 0;    //w
+            a(i*10 + 0) = 0.00000000001;    //u
+            a(i*10 + 1) = 0.00000000001;    //v
+            a(i*10 + 2) = 0.00000000001;    //w
 
             a(i*10 + 3) = 0;   //T
             a(i*10 + 4) = 0;    //Sn
             a(i*10 + 5) = 0;    //Sb
 
-            a(i*10 + 6) = 0.00001;    //phi
-            a(i*10 + 7) = 0.00001;    //theta
+            a(i*10 + 6) = 0.00000000001;    //Theta
+            a(i*10 + 7) = 0.00000000001;    //Phi
 
-            a(i*10 + 8) = 0.00001;    //O2mega
-            a(i*10 + 9) = 0.00001;    //O3mega
+            a(i*10 + 8) = 0.00000000001;    //O2mega
+            a(i*10 + 9) = 0.00000000001;    //O3mega
         }
-        a(493) = 30.0;
+        a(493) = 0.00000001;
         TransVal = a;
     }
 

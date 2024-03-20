@@ -1,12 +1,12 @@
-syms Theta Phi V1 V2 V3 u v w;
+syms Theta Phi Gx Gy Gz u v w;
 syms Omega2 Omega3;
 syms T Sn Sb;
 syms Gx Gy Gz G;
 syms rho Cdn Cdb Sdn Sdb;
 
-Trans = [cos(Theta)*cos(Phi),-cos(Theta)*sin(Phi),-sin(Phi);sin(Phi),cos(Phi),0;sin(Theta)*cos(Phi),-sin(Theta)*sin(Phi),cos(Theta)];
+Trans = [cos(Theta)*cos(Phi),-sin(Phi),cos(Phi)*sin(Theta);cos(Theta)*sin(Phi),cos(Phi),sin(Phi)*sin(Theta);-sin(Theta),0,cos(Theta)];
 
-g = [Gx;Gy;Gz]
+g = [Gz;Gx;Gy]
 t = [T;Sn;Sb]
 
 gg = Trans*g;

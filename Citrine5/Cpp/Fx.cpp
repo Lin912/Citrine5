@@ -24,24 +24,25 @@ Fx::Fx(VectorXd& arr, VectorXd& brr, int index)
     g = a.ReadPhysical().back();
 
 
-    V1 = a.ReadWater(index)[0];
-    V2 = a.ReadWater(index)[1];
-    V3 = a.ReadWater(index)[2];
+    Vz = a.ReadWater(index)[0];
+    Vx = a.ReadWater(index)[1];
+    Vy = a.ReadWater(index)[2];
 
-    Vt1 = a.ReadTopVel(index)[0];
-    Vt2 = a.ReadTopVel(index)[1];
-    Vt3 = a.ReadTopVel(index)[2];
+    Vtz = a.ReadTopVel(index)[0];
+    Vtx = a.ReadTopVel(index)[1];
+    Vty = a.ReadTopVel(index)[2];
 
-    Vb1 = a.ReadBottomVel()[0];
-    Vb2 = a.ReadBottomVel()[1];
-    Vb3 = a.ReadBottomVel()[2];
+    Vbz = a.ReadBottomVel()[0];
+    Vbx = a.ReadBottomVel()[1];
+    Vby = a.ReadBottomVel()[2];
+
 
     deltaT = a.ReadDelta()[0];
     deltaS = a.ReadDelta()[1];
 
-    Gx = a.ReadBottomG()[0];
-    Gy = a.ReadBottomG()[1];
-    Gz = a.ReadBottomG()[2];
+    Gz = a.ReadBottomG()[0];
+    Gx = a.ReadBottomG()[1];
+    Gy = a.ReadBottomG()[2];
     Ax = a.ReadBottomG()[3];
     Ay = a.ReadBottomG()[4];
     Az = a.ReadBottomG()[5];
@@ -1000,9 +1001,9 @@ VectorXd Fx::fx()
     VectorXd BCtemp0(5);
     VectorXd BCtemp1(5);
 
-    BCtemp0(0) = Y0new(0) - Vt1*cos(Y0new(6))*cos(Y0new(7)) + Vt2*sin(Y0new(7))*cos(Y0new(6)) + Vt3*sin(Y0new(6));
-    BCtemp0(1) = Y0new(1) - Vt2*cos(Y0new(7)) - Vt1*sin(Y0new(7));
-    BCtemp0(2) = Y0new(2) - Vt1*sin(Y0new(6))*cos(Y0new(7)) + Vt2*sin(Y0new(7))*sin(Y0new(6)) - Vt3*cos(Y0new(6));
+    BCtemp0(0) = Y0new(0) - (Vtz*cos(Y0new(6))*cos(Y0new(7)) + Vty*sin(Y0new(6))*cos(Y0new(7)) - Vtx*sin(Y0new(7)));
+    BCtemp0(1) = Y0new(1) - (Vtz*cos(Y0new(6))*sin(Y0new(7)) + Vty*sin(Y0new(6))*sin(Y0new(7)) + Vtx*cos(Y0new(7)));
+    BCtemp0(2) = Y0new(2) - (Vty*cos(Y0new(6)) - Vtz*sin(Y0new(6)));
     BCtemp0(3) = Y0new(8);
     BCtemp0(4) = Y0new(9);
 
@@ -1011,9 +1012,9 @@ VectorXd Fx::fx()
     //(VG)
     double Sdn = 0.003162;
     double Sdb = 0.003162;
-    BCtemp1(0) = Y49new(3) - Gx*cos(Y49new(6))*cos(Y49new(7)) + Gy*sin(Y49new(7))*cos(Y49new(6)) + Gz*sin(Y49new(6));
-    BCtemp1(1) = Y49new(4) - Gy*cos(Y49new(7)) - Gx*sin(Y49new(7));
-    BCtemp1(2) = Y49new(5) - Gx*sin(Y49new(6))*cos(Y49new(7)) + Gy*sin(Y49new(7))*sin(Y49new(6)) - Gz*cos(Y49new(6));
+    BCtemp1(0) = Y49new(3) - (Gz*cos(Y49new(6))*cos(Y49new(7)) + Gy*sin(Y49new(6))*cos(Y49new(7)) - Gx*sin(Y49new(7)));
+    BCtemp1(1) = Y49new(4) - (Gz*cos(Y49new(6))*sin(Y49new(7)) + Gy*sin(Y49new(6))*sin(Y49new(7)) + Gx*cos(Y49new(7)));
+    BCtemp1(2) = Y49new(5) - (Gy*cos(Y49new(6)) - Gz*sin(Y49new(6)));
     BCtemp1(3) = Y49new(8);
     BCtemp1(4) = Y49new(9);
 

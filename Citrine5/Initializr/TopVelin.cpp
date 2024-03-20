@@ -13,9 +13,9 @@ int main()
 {
     int Nodes = 50;
     int variable = 10;
-    int TV = 500;                                                //总变量数TV= Nodes * variable
-    int TimeStep = 2000;                                         //总时间步数
-    double DelTime = 0.002;                                      //时间步长(真实时间步长)
+    int TV = 500;                                                 //总变量数TV= Nodes * variable
+    int TimeStep = 2000;                                          //总时间步数
+    double DelTime = 0.002;                                       //时间步长(真实时间步长)
     double pi = 3.1415926;
 
     MatrixXd a(TimeStep, TV);
@@ -25,10 +25,9 @@ int main()
     b.Zero(TimeStep, 3);
     for(int i = 0; i < TimeStep; i++)
     {
-        b(i, 0) = 0;
-        b(i, 1) = 0.2 * 2*pi/3.0 *cos(2*pi/3.0 * (i+1) * DelTime);
-        // b(i, 1) = 0.3 * 2*pi/2.5 *sin(2*pi/2.5 * (i+1) * DelTime);
-        // b(i, 2) = 0.3 * 2*pi/2.5 *cos(2*pi/2.5 * (i+1) * DelTime);
+        b(i, 0) = 0.000001;
+       //b(i, 1) = 0.2 * 2*pi/2.0 *cos(2*pi/2.0 * (i+1) * DelTime);
+       b(i, 1) = 0;
     }
 
     ofstream dataFile;
