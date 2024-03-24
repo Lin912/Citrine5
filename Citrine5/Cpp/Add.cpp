@@ -57,9 +57,9 @@ VectorXd Add::Addyold()
     VectorXd temp(500);
 
     VectorXd point00(3);
-    point00(0) = Vtz*cos(Yold(6))*cos(Yold(7)) + Vty*sin(Yold(6))*cos(Yold(7)) - Vtx*sin(Yold(7));          //速度u边界条件（上）
-    point00(1) = Vtz*cos(Yold(6))*sin(Yold(7)) + Vty*sin(Yold(6))*sin(Yold(7)) + Vtx*cos(Yold(7));          //速度V边界条件
-    point00(2) = Vty*cos(Yold(6)) - Vtz*sin(Yold(6));            //速度w边界条件
+    point00(0) = Vtz*cos(Yold(6))*cos(Yold(7)) + Vtx*sin(Yold(7))*cos(Yold(6)) - Vty*sin(Yold(6));         //速度u边界条件（上）
+    point00(1) = Vtx*cos(Yold(7)) - Vtz*sin(Yold(7));         //速度V边界条件
+    point00(2) = Vtz*cos(Yold(7))*sin(Yold(6)) + Vtx*sin(Yold(6))*sin(Yold(7)) + Vty*cos(Yold(6));          //速度w边界条件
     VectorXd point01(2);
     point01(0) = 0;              //O2mega边界条件（上）
     point01(1) = 0;              //O3mega边界条件
@@ -74,9 +74,9 @@ VectorXd Add::Addyold()
     VectorXd point02(3);
     double Sdn = 0.003162;
     double Sdb = 0.003162;
-    point02(0) =  Gz*cos(Yold(496))*cos(Yold(497)) + Gy*sin(Yold(496))*cos(Yold(497)) - Gx*sin(Yold(497));
-    point02(1) =  Gz*cos(Yold(496))*sin(Yold(497)) + Gy*sin(Yold(496))*sin(Yold(497)) + Gx*cos(Yold(497));
-    point02(2) =  Gy*cos(Yold(496)) - Gz*sin(Yold(496));
+    point02(0) =  Gz*cos(Yold(496))*cos(Yold(497)) + Gx*sin(Yold(497))*cos(Yold(496)) - Gy*sin(Yold(496));
+    point02(1) =  Gx*cos(Yold(497)) - Gz*sin(Yold(497));
+    point02(2) =  Gz*cos(Yold(497))*sin(Yold(496)) + Gx*sin(Yold(496))*sin(Yold(497)) + Gy*cos(Yold(496));
 
     VectorXd point03(2);
     point03(0) = 0;              //O2mega边界条件（下）
@@ -107,9 +107,9 @@ VectorXd Add::Addynew()
     VectorXd temp(500);
 
     VectorXd point00(3);
-    point00(0) = Vtz*cos(Ynew(6))*cos(Ynew(7)) + Vty*sin(Ynew(6))*cos(Ynew(7)) - Vtx*sin(Ynew(7));             //速度u边界条件（上）
-    point00(1) = Vtz*cos(Ynew(6))*sin(Ynew(7)) + Vty*sin(Ynew(6))*sin(Ynew(7)) + Vtx*cos(Ynew(7));           //速度V边界条件
-    point00(2) = Vty*cos(Ynew(6)) - Vtz*sin(Ynew(6));             //速度w边界条件
+    point00(0) = Vtz*cos(Ynew(6))*cos(Ynew(7)) + Vtx*sin(Ynew(7))*cos(Ynew(6)) - Vty*sin(Ynew(6));             //速度u边界条件（上）
+    point00(1) = Vtx*cos(Ynew(7)) - Vtz*sin(Ynew(7));           //速度V边界条件
+    point00(2) = Vtz*cos(Ynew(7))*sin(Ynew(6)) + Vtx*sin(Ynew(6))*sin(Ynew(7)) + Vty*cos(Ynew(6));           //速度w边界条件
 
     VectorXd point01(2);
     point01(0) = 0;              //O2mega边界条件（上）
@@ -127,9 +127,9 @@ VectorXd Add::Addynew()
     VectorXd point02(3);
     double Sdn = 0.003162;
     double Sdb = 0.003162;
-    point02(0) =  Gz*cos(Ynew(496))*cos(Ynew(497)) + Gy*sin(Ynew(496))*cos(Ynew(497)) - Gx*sin(Ynew(497));
-    point02(1) =  Gz*cos(Ynew(496))*sin(Ynew(497)) + Gy*sin(Ynew(496))*sin(Ynew(497)) + Gx*cos(Ynew(497));
-    point02(2) =  Gy*cos(Ynew(496)) - Gz*sin(Ynew(496));
+    point02(0) =  Gz*cos(Ynew(496))*cos(Ynew(497)) + Gx*sin(Ynew(497))*cos(Ynew(496)) - Gy*sin(Ynew(496));
+    point02(1) =  Gx*cos(Ynew(497)) - Gz*sin(Ynew(497));
+    point02(2) =  Gz*cos(Ynew(497))*sin(Ynew(496)) + Gx*sin(Ynew(496))*sin(Ynew(497)) + Gy*cos(Ynew(496));
 
 
     VectorXd point03(2);

@@ -1001,9 +1001,9 @@ VectorXd Fx::fx()
     VectorXd BCtemp0(5);
     VectorXd BCtemp1(5);
 
-    BCtemp0(0) = Y0new(0) - (Vtz*cos(Y0new(6))*cos(Y0new(7)) + Vty*sin(Y0new(6))*cos(Y0new(7)) - Vtx*sin(Y0new(7)));
-    BCtemp0(1) = Y0new(1) - (Vtz*cos(Y0new(6))*sin(Y0new(7)) + Vty*sin(Y0new(6))*sin(Y0new(7)) + Vtx*cos(Y0new(7)));
-    BCtemp0(2) = Y0new(2) - (Vty*cos(Y0new(6)) - Vtz*sin(Y0new(6)));
+    BCtemp0(0) = Y0new(0) - (Vtz*cos(Y0new(6))*cos(Y0new(7)) + Vtx*sin(Y0new(7))*cos(Y0new(6)) - Vty*sin(Y0new(6)));
+    BCtemp0(1) = Y0new(1) - (Vtx*cos(Y0new(7)) - Vtz*sin(Y0new(7)));
+    BCtemp0(2) = Y0new(2) - (Vtz*cos(Y0new(7))*sin(Y0new(6)) + Vtx*sin(Y0new(6))*sin(Y0new(7)) + Vty*cos(Y0new(6)));
     BCtemp0(3) = Y0new(8);
     BCtemp0(4) = Y0new(9);
 
@@ -1012,9 +1012,9 @@ VectorXd Fx::fx()
     //(VG)
     double Sdn = 0.003162;
     double Sdb = 0.003162;
-    BCtemp1(0) = Y49new(3) - (Gz*cos(Y49new(6))*cos(Y49new(7)) + Gy*sin(Y49new(6))*cos(Y49new(7)) - Gx*sin(Y49new(7)));
-    BCtemp1(1) = Y49new(4) - (Gz*cos(Y49new(6))*sin(Y49new(7)) + Gy*sin(Y49new(6))*sin(Y49new(7)) + Gx*cos(Y49new(7)));
-    BCtemp1(2) = Y49new(5) - (Gy*cos(Y49new(6)) - Gz*sin(Y49new(6)));
+    BCtemp1(0) = Y49new(3) - (Gz*cos(Y49new(6))*cos(Y49new(7)) + Gx*sin(Y49new(7))*cos(Y49new(6)) - Gy*sin(Y49new(6)));
+    BCtemp1(1) = Y49new(4) - (Gx*cos(Y49new(7)) - Gz*sin(Y49new(7)));
+    BCtemp1(2) = Y49new(5) - (Gz*cos(Y49new(7))*sin(Y49new(6)) + Gx*sin(Y49new(6))*sin(Y49new(7)) + Gy*cos(Y49new(6)));
     BCtemp1(3) = Y49new(8);
     BCtemp1(4) = Y49new(9);
 

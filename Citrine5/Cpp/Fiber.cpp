@@ -43,7 +43,7 @@ void FiberMain::Calculation(int index)
         for(int i = 0; i < Nodes; i++)
         {
             a(i*10 + 0) = 0.00000000001;    //u
-            a(i*10 + 1) = 0.00000000001;    //v
+            a(i*10 + 1) = 0.00000001;    //v
             a(i*10 + 2) = 0.00000000001;    //w
 
             a(i*10 + 3) = 0;   //T
@@ -56,7 +56,7 @@ void FiberMain::Calculation(int index)
             a(i*10 + 8) = 0.00000000001;    //O2mega
             a(i*10 + 9) = 0.00000000001;    //O3mega
         }
-        a(493) = 0.00000001;
+        a(493) = 0.001;
         TransVal = a;
     }
 

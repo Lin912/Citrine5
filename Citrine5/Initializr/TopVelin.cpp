@@ -28,6 +28,7 @@ int main()
         b(i, 0) = 0.000001;
        //b(i, 1) = 0.2 * 2*pi/2.0 *cos(2*pi/2.0 * (i+1) * DelTime);
        b(i, 1) = 0;
+       b(i, 2) = 0;
     }
 
     ofstream dataFile;
