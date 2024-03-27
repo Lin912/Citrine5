@@ -271,15 +271,15 @@ void FiberRO::Outforce(VectorXd v)
 
 
     MatrixXd tpmat(3, 3);
-    tpmat(0, 0) = cos(v(497))*cos(v(496)); 
-    tpmat(0, 1) = -cos(v(496))*sin(v(497));
-    tpmat(0, 2) = -sin(v(496));
-    tpmat(1, 0) = sin(v(497));
-    tpmat(1, 1) = cos(v(497));
-    tpmat(1, 2) = 0.0;
-    tpmat(2, 0) = cos(v(497))*sin(v(496));
-    tpmat(2, 1) = -sin(v(496))*sin(v(497));
-    tpmat(2, 2) = cos(v(496));
+    //tpmat(0, 0) = cos(v(497))*cos(v(496)); 
+    //tpmat(0, 1) = -cos(v(496))*sin(v(497));
+    //tpmat(0, 2) = -sin(v(496));
+    //tpmat(1, 0) = sin(v(497));
+    //tpmat(1, 1) = cos(v(497));
+    //tpmat(1, 2) = 0.0;
+    //tpmat(2, 0) = cos(v(497))*sin(v(496));
+    //tpmat(2, 1) = -sin(v(496))*sin(v(497));
+    //tpmat(2, 2) = cos(v(496));
 
     MatrixXd bb(1, 3);
 
