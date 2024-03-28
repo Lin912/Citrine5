@@ -9,7 +9,7 @@ using namespace std;
 void function0();
 int main()
 {
-    int TimeStep = 2000;
+    int TimeStep = 10000;
     int timeforCitrine5 = 0;
 
     while(1)

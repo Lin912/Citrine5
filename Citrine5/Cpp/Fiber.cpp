@@ -7,8 +7,8 @@ FiberMain::FiberMain()
     Nodes = 50;
     variable = 10;
     TotNoV = 500;
-    TimeStep = 2000;
-    DelTime = 0.002;
+    TimeStep = 10000;
+    DelTime = 0.001;
 }
 
 FiberMain::~FiberMain()

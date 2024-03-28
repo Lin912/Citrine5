@@ -122,8 +122,8 @@ void Iterator::begin (int k)
 
 
         //******************************************************//误差输出及重新装载单元（待修改）
-        double aError = 0.001;
-        double bError = 0.0000001;
+        double aError = 0.000001;
+        double bError = 0.000001;
 
         if(amax < aError || bmax < bError)
         {
