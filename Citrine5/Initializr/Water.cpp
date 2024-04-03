@@ -14,7 +14,7 @@ int main()
     int Nodes = 50;
     int variable = 10;
     int TV = 500;                                                //总变量数TV= Nodes * variable
-    int TimeStep = 10000;                                         //总时间步数
+    int TimeStep = 20000;                                         //总时间步数
     double DelTime = 0.001;                                      //时间步长(真实时间步长)
     double pi = 3.1415926;
 
