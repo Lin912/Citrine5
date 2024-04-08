@@ -26,7 +26,7 @@ int main()
     for(int i = 0; i < TimeStep; i++)
     {
         if(i <= 6000){
-            b(i, 0) = 0.00001;
+            b(i, 0) = 0.2 * 2*pi/2.0 *cos(2*pi/2.0 * (i - 6000) * DelTime);
             b(i, 1) = 0;
             b(i, 2) = 0;
         }
