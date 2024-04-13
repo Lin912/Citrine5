@@ -1,0 +1,4 @@
+Period:			0s
+Amplitude:		0m
+Element gravity:	-0.01
+Water Velocity:	0m/s
