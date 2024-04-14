@@ -10,7 +10,7 @@ void function0();
 int main()
 {
     int TimeStep = 10000;
-    int timeforCitrine5 = 3946;
+    int timeforCitrine5 = 0;
 
     while(1)
     {    
