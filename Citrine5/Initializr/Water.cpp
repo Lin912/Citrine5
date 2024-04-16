@@ -25,7 +25,7 @@ int main()
     b.Zero(TimeStep, 3);
     for(int i = 0; i < TimeStep; i++)
     {
-        b(i, 0) = 0.01;
+        b(i, 0) = 0;
         b(i, 1) = 0;
         b(i, 2) = 0;
     }
