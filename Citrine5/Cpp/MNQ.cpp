@@ -146,8 +146,12 @@ VectorXd MNQ::Qold()
         temp(i*10 + 0) = Yold(i*10 +9)*Yold(i*10 +4) - Yold(i*10 +8)*Yold(i*10 +5) - w0*cos(Yold(i*10 +6))*sin(Yold(i*10 +7)) - 0.5*Cdt*d0*pi*rho*abs(Yold(i*10 +0) + Vy*sin(Yold(i*10 +6)) - Vz*cos(Yold(i*10 +7))*cos(Yold(i*10 +6)) - Vx*cos(Yold(i*10 +6))*sin(Yold(i*10 +7)))*sqrt(Yold(i*10 +3)/(A*E) + 1)*(Yold(i*10 +0) + Vy*sin(Yold(i*10 +6)) - Vz*cos(Yold(i*10 +7))*cos(Yold(i*10 +6)) - Vx*cos(Yold(i*10 +6))*sin(Yold(i*10 +7)));
         temp(i*10 + 1) = - Yold(i*10 +9)*Yold(i*10 +3) - w0*cos(Yold(i*10 +7)) - Yold(i*10 +9)*Yold(i*10 +5)*tan(Yold(i*10 +6)) - 0.5*Cdn*rho*sqrt(Yold(i*10 +3)/(A*E) + 1)*sqrt(pow((Yold(i*10 +1) - Vx*cos(Yold(i*10 +7)) + Vz*sin(Yold(i*10 +7))),2) + pow((Vy*cos(Yold(i*10 +6)) - Yold(i*10 +2) + Vz*cos(Yold(i*10 +7))*sin(Yold(i*10 +6)) + Vx*sin(Yold(i*10 +7))*sin(Yold(i*10 +6))),2))*(Yold(i*10 +1) - Vx*cos(Yold(i*10 +7)) + Vz*sin(Yold(i*10 +7)));
         temp(i*10 + 2) = Yold(i*10 +8)*Yold(i*10 +3) - w0*sin(Yold(i*10 +7))*sin(Yold(i*10 +6)) - Yold(i*10 +9)*Yold(i*10 +4)*tan(Yold(i*10 +6)) + 0.5*Cdb*rho*sqrt(Yold(i*10 +3)/(A*E) + 1)*sqrt(pow((Yold(i*10 +1) - Vx*cos(Yold(i*10 +7)) + Vz*sin(Yold(i*10 +7))),2) + pow((Vy*cos(Yold(i*10 +6)) - Yold(i*10 +2) + Vz*cos(Yold(i*10 +7))*sin(Yold(i*10 +6)) + Vx*sin(Yold(i*10 +7))*sin(Yold(i*10 +6))),2))*(Vy*cos(Yold(i*10 +6)) - Yold(i*10 +2) + Vz*cos(Yold(i*10 +7))*sin(Yold(i*10 +6)) + Vx*sin(Yold(i*10 +7))*sin(Yold(i*10 +6)));
+        
+        
         temp(i*10 + 3) = E*I*pow(Yold(i*10 +9),2)*tan(Yold(i*10 +6)) - Yold(i*10 +5)*pow((Yold(i*10 +3)/(A*E) + 1),3);
         temp(i*10 + 4) = Yold(i*10 +4)*(Yold(i*10 +3)/(A*E) + 1)*pow((Yold(i*10 +3)/(A*E) + 1),2) - E*I*Yold(i*10 +8)*Yold(i*10 +9)*tan(Yold(i*10 +6));
+
+
         temp(i*10 + 5) = Yold(i*10 +9)*Yold(i*10 +1) - Yold(i*10 +8)*Yold(i*10 +2);
         temp(i*10 + 6) = -Yold(i*10 +9)*(Yold(i*10 +0) + Yold(i*10 +2)*tan(Yold(i*10 +6)));
         temp(i*10 + 7) = - Yold(i*10 +8)*Yold(i*10 +0) - Yold(i*10 +9)*Yold(i*10 +1)*tan(Yold(i*10 +6));
@@ -167,11 +171,16 @@ VectorXd MNQ::Qnew()
         temp(i*10 + 0) = Ynew(i*10 +9)*Ynew(i*10 +4) - Ynew(i*10 +8)*Ynew(i*10 +5) - w0*cos(Ynew(i*10 +6))*sin(Ynew(i*10 +7)) - 0.5*Cdt*d0*pi*rho*abs(Ynew(i*10 +0) + Vy*sin(Ynew(i*10 +6)) - Vz*cos(Ynew(i*10 +7))*cos(Ynew(i*10 +6)) - Vx*cos(Ynew(i*10 +6))*sin(Ynew(i*10 +7)))*sqrt(Ynew(i*10 +3)/(A*E) + 1)*(Ynew(i*10 +0) + Vy*sin(Ynew(i*10 +6)) - Vz*cos(Ynew(i*10 +7))*cos(Ynew(i*10 +6)) - Vx*cos(Ynew(i*10 +6))*sin(Ynew(i*10 +7)));
         temp(i*10 + 1) = - Ynew(i*10 +9)*Ynew(i*10 +3) - w0*cos(Ynew(i*10 +7)) - Ynew(i*10 +9)*Ynew(i*10 +5)*tan(Ynew(i*10 +6)) - 0.5*Cdn*rho*sqrt(Ynew(i*10 +3)/(A*E) + 1)*sqrt(pow((Ynew(i*10 +1) - Vx*cos(Ynew(i*10 +7)) + Vz*sin(Ynew(i*10 +7))),2) + pow((Vy*cos(Ynew(i*10 +6)) - Ynew(i*10 +2) + Vz*cos(Ynew(i*10 +7))*sin(Ynew(i*10 +6)) + Vx*sin(Ynew(i*10 +7))*sin(Ynew(i*10 +6))),2))*(Ynew(i*10 +1) - Vx*cos(Ynew(i*10 +7)) + Vz*sin(Ynew(i*10 +7)));
         temp(i*10 + 2) = Ynew(i*10 +8)*Ynew(i*10 +3) - w0*sin(Ynew(i*10 +7))*sin(Ynew(i*10 +6)) - Ynew(i*10 +9)*Ynew(i*10 +4)*tan(Ynew(i*10 +6)) + 0.5*Cdb*rho*sqrt(Ynew(i*10 +3)/(A*E) + 1)*sqrt(pow((Ynew(i*10 +1) - Vx*cos(Ynew(i*10 +7)) + Vz*sin(Ynew(i*10 +7))),2) + pow((Vy*cos(Ynew(i*10 +6)) - Ynew(i*10 +2) + Vz*cos(Ynew(i*10 +7))*sin(Ynew(i*10 +6)) + Vx*sin(Ynew(i*10 +7))*sin(Ynew(i*10 +6))),2))*(Vy*cos(Ynew(i*10 +6)) - Ynew(i*10 +2) + Vz*cos(Ynew(i*10 +7))*sin(Ynew(i*10 +6)) + Vx*sin(Ynew(i*10 +7))*sin(Ynew(i*10 +6)));
+        
+        
         temp(i*10 + 3) = E*I*pow(Ynew(i*10 +9),2)*tan(Ynew(i*10 +6)) - Ynew(i*10 +5)*pow((Ynew(i*10 +3)/(A*E) + 1),3);
         temp(i*10 + 4) = Ynew(i*10 +4)*(Ynew(i*10 +3)/(A*E) + 1)*pow((Ynew(i*10 +3)/(A*E) + 1),2) - E*I*Ynew(i*10 +8)*Ynew(i*10 +9)*tan(Ynew(i*10 +6));
+
         temp(i*10 + 5) = Ynew(i*10 +9)*Ynew(i*10 +1) - Ynew(i*10 +8)*Ynew(i*10 +2);
         temp(i*10 + 6) = -Ynew(i*10 +9)*(Ynew(i*10 +0) + Ynew(i*10 +2)*tan(Ynew(i*10 +6)));
         temp(i*10 + 7) = - Ynew(i*10 +8)*Ynew(i*10 +0) - Ynew(i*10 +9)*Ynew(i*10 +1)*tan(Ynew(i*10 +6));
+
+
         temp(i*10 + 8) = Ynew(i*10 +8);
         temp(i*10 + 9) = Ynew(i*10 +9);
     }
