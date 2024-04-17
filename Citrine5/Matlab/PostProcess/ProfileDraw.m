@@ -16,10 +16,10 @@ if flag==1
 else
 end
 
-data_new=zeros(2000,150);
+data_new=zeros(10000,150);
 
 for i=1:150
-    for j=3:2000
+    for j=3:10000
         data_new(j,i)=v_int_Sim(1,j,i,Tck);
     end
 end
@@ -128,129 +128,129 @@ Zr20 = zeros(50,1);
 
 
 for j=1:size(data_new,2)/3 
-       Xr0(j) = data_new(1,3*(j-1)+1);
-       Yr0(j) = data_new(1,3*(j-1)+2);
-       Zr0(j) = data_new(1,3*(j-1)+3);
+       Xr0(j) = data_new(1,3*(j-1)+2);
+       Yr0(j) = data_new(1,3*(j-1)+3);
+       Zr0(j) = data_new(1,3*(j-1)+1);
 end
 
 for j=1:size(data_new,2)/3 
-       Xr1(j) = data_new(100,3*(j-1)+1);
-       Yr1(j) = data_new(100,3*(j-1)+2);
-       Zr1(j) = data_new(100,3*(j-1)+3);
+       Xr1(j) = data_new(100,3*(j-1)+2);
+       Yr1(j) = data_new(100,3*(j-1)+3);
+       Zr1(j) = data_new(100,3*(j-1)+1);
 end
 
 for j=1:size(data_new,2)/3 
-       Xr2(j) = data_new(200,3*(j-1)+1);
-       Yr2(j) = data_new(200,3*(j-1)+2);
-       Zr2(j) = data_new(200,3*(j-1)+3);
+       Xr2(j) = data_new(200,3*(j-1)+2);
+       Yr2(j) = data_new(200,3*(j-1)+3);
+       Zr2(j) = data_new(200,3*(j-1)+1);
 end
 
 for j=1:size(data_new,2)/3 
-       Xr3(j) = data_new(300,3*(j-1)+1);
-       Yr3(j) = data_new(300,3*(j-1)+2);
-       Zr3(j) = data_new(300,3*(j-1)+3);
+       Xr3(j) = data_new(300,3*(j-1)+2);
+       Yr3(j) = data_new(300,3*(j-1)+3);
+       Zr3(j) = data_new(300,3*(j-1)+1);
 end
 
 for j=1:size(data_new,2)/3 
-       Xr4(j) = data_new(400,3*(j-1)+1);
-       Yr4(j) = data_new(400,3*(j-1)+2);
-       Zr4(j) = data_new(400,3*(j-1)+3);
+       Xr4(j) = data_new(400,3*(j-1)+2);
+       Yr4(j) = data_new(400,3*(j-1)+3);
+       Zr4(j) = data_new(400,3*(j-1)+1);
 end
 
 for j=1:size(data_new,2)/3 
-       Xr5(j) = data_new(500,3*(j-1)+1);
-       Yr5(j) = data_new(500,3*(j-1)+2);
-       Zr5(j) = data_new(500,3*(j-1)+3);
+       Xr5(j) = data_new(500,3*(j-1)+2);
+       Yr5(j) = data_new(500,3*(j-1)+3);
+       Zr5(j) = data_new(500,3*(j-1)+1);
 end
 
 for j=1:size(data_new,2)/3 
-       Xr6(j) = data_new(600,3*(j-1)+1);
-       Yr6(j) = data_new(600,3*(j-1)+2);
-       Zr6(j) = data_new(600,3*(j-1)+3);
+       Xr6(j) = data_new(600,3*(j-1)+2);
+       Yr6(j) = data_new(600,3*(j-1)+3);
+       Zr6(j) = data_new(600,3*(j-1)+1);
 end
 
 for j=1:size(data_new,2)/3 
-       Xr7(j) = data_new(700,3*(j-1)+1);
-       Yr7(j) = data_new(700,3*(j-1)+2);
-       Zr7(j) = data_new(700,3*(j-1)+3);
+       Xr7(j) = data_new(700,3*(j-1)+2);
+       Yr7(j) = data_new(700,3*(j-1)+3);
+       Zr7(j) = data_new(700,3*(j-1)+1);
 end
 
 for j=1:size(data_new,2)/3 
-       Xr8(j) = data_new(800,3*(j-1)+1);
-       Yr8(j) = data_new(800,3*(j-1)+2);
-       Zr8(j) = data_new(800,3*(j-1)+3);
+       Xr8(j) = data_new(800,3*(j-1)+2);
+       Yr8(j) = data_new(800,3*(j-1)+3);
+       Zr8(j) = data_new(800,3*(j-1)+1);
 end
 
 for j=1:size(data_new,2)/3 
-       Xr9(j) = data_new(900,3*(j-1)+1);
-       Yr9(j) = data_new(900,3*(j-1)+2);
-       Zr9(j) = data_new(900,3*(j-1)+3);
+       Xr9(j) = data_new(900,3*(j-1)+2);
+       Yr9(j) = data_new(900,3*(j-1)+3);
+       Zr9(j) = data_new(900,3*(j-1)+1);
 end
 
 for j=1:size(data_new,2)/3 
-       Xr10(j) = data_new(1000,3*(j-1)+1);
-       Yr10(j) = data_new(1000,3*(j-1)+2);
-       Zr10(j) = data_new(1000,3*(j-1)+3);
+       Xr10(j) = data_new(1000,3*(j-1)+2);
+       Yr10(j) = data_new(1000,3*(j-1)+3);
+       Zr10(j) = data_new(1000,3*(j-1)+1);
 end
 
 for j=1:size(data_new,2)/3 
-       Xr11(j) = data_new(1100,3*(j-1)+1);
-       Yr11(j) = data_new(1100,3*(j-1)+2);
-       Zr11(j) = data_new(1100,3*(j-1)+3);
+       Xr11(j) = data_new(1100,3*(j-1)+2);
+       Yr11(j) = data_new(1100,3*(j-1)+3);
+       Zr11(j) = data_new(1100,3*(j-1)+1);
 end
 
 for j=1:size(data_new,2)/3 
-       Xr12(j) = data_new(1200,3*(j-1)+1);
-       Yr12(j) = data_new(1200,3*(j-1)+2);
-       Zr12(j) = data_new(1200,3*(j-1)+3);
+       Xr12(j) = data_new(1200,3*(j-1)+2);
+       Yr12(j) = data_new(1200,3*(j-1)+3);
+       Zr12(j) = data_new(1200,3*(j-1)+1);
 end
 
 for j=1:size(data_new,2)/3 
-       Xr13(j) = data_new(1300,3*(j-1)+1);
-       Yr13(j) = data_new(1300,3*(j-1)+2);
-       Zr13(j) = data_new(1300,3*(j-1)+3);
+       Xr13(j) = data_new(1300,3*(j-1)+2);
+       Yr13(j) = data_new(1300,3*(j-1)+3);
+       Zr13(j) = data_new(1300,3*(j-1)+1);
 end
 
 for j=1:size(data_new,2)/3 
-       Xr14(j) = data_new(1400,3*(j-1)+1);
-       Yr14(j) = data_new(1400,3*(j-1)+2);
-       Zr14(j) = data_new(1400,3*(j-1)+3);
+       Xr14(j) = data_new(1400,3*(j-1)+2);
+       Yr14(j) = data_new(1400,3*(j-1)+3);
+       Zr14(j) = data_new(1400,3*(j-1)+1);
 end
 
 for j=1:size(data_new,2)/3 
-       Xr15(j) = data_new(1500,3*(j-1)+1);
-       Yr15(j) = data_new(1500,3*(j-1)+2);
-       Zr15(j) = data_new(1500,3*(j-1)+3);
+       Xr15(j) = data_new(1500,3*(j-1)+2);
+       Yr15(j) = data_new(1500,3*(j-1)+3);
+       Zr15(j) = data_new(1500,3*(j-1)+1);
 end
 
 for j=1:size(data_new,2)/3 
-       Xr16(j) = data_new(1600,3*(j-1)+1);
-       Yr16(j) = data_new(1600,3*(j-1)+2);
-       Zr16(j) = data_new(1600,3*(j-1)+3);
+       Xr16(j) = data_new(1600,3*(j-1)+2);
+       Yr16(j) = data_new(1600,3*(j-1)+3);
+       Zr16(j) = data_new(1600,3*(j-1)+1);
 end
 
 for j=1:size(data_new,2)/3 
-       Xr17(j) = data_new(1700,3*(j-1)+1);
-       Yr17(j) = data_new(1700,3*(j-1)+2);
-       Zr17(j) = data_new(1700,3*(j-1)+3);
+       Xr17(j) = data_new(1700,3*(j-1)+2);
+       Yr17(j) = data_new(1700,3*(j-1)+3);
+       Zr17(j) = data_new(1700,3*(j-1)+1);
 end
 
 for j=1:size(data_new,2)/3 
-       Xr18(j) = data_new(1800,3*(j-1)+1);
-       Yr18(j) = data_new(1800,3*(j-1)+2);
-       Zr18(j) = data_new(1800,3*(j-1)+3);
+       Xr18(j) = data_new(1800,3*(j-1)+2);
+       Yr18(j) = data_new(1800,3*(j-1)+3);
+       Zr18(j) = data_new(1800,3*(j-1)+1);
 end
 
 for j=1:size(data_new,2)/3 
-       Xr19(j) = data_new(1900,3*(j-1)+1);
-       Yr19(j) = data_new(1900,3*(j-1)+2);
-       Zr19(j) = data_new(1900,3*(j-1)+3);
+       Xr19(j) = data_new(1900,3*(j-1)+2);
+       Yr19(j) = data_new(1900,3*(j-1)+3);
+       Zr19(j) = data_new(1900,3*(j-1)+1);
 end
 
 for j=1:size(data_new,2)/3 
-       Xr20(j) = data_new(2000,3*(j-1)+1);
-       Yr20(j) = data_new(2000,3*(j-1)+2);
-       Zr20(j) = data_new(2000,3*(j-1)+3);
+       Xr20(j) = data_new(2000,3*(j-1)+2);
+       Yr20(j) = data_new(2000,3*(j-1)+3);
+       Zr20(j) = data_new(2000,3*(j-1)+1);
 end
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -259,9 +259,9 @@ Xc = zeros(1000,1);
 Yc = zeros(1000,1);
 Zc = zeros(1000,1);
 for j=1:size(data_new,1) 
-       Xc(j) = data_new(j,1);
-       Yc(j) = data_new(j,2);
-       Zc(j) = data_new(j,3);
+       Xc(j) = data_new(j,2);
+       Yc(j) = data_new(j,3);
+       Zc(j) = data_new(j,1);
 end
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -309,11 +309,11 @@ hold on;
 plot3(Xr20,Yr20,Zr20);
 
 %图例设置
-xlim([-5 5]);
-ylim([-10 1]);
+xlim([-10 1]);
+ylim([-5 5]);
 zlim([-0.2 0.2]);
-set(gca,'XTick',-5:2:5);
-set(gca,'YTick',-10:2:1);
+set(gca,'XTick',-10:2:1);
+set(gca,'YTick',-5:2:5);
 set(gca,'ZTick',-0.2:0.05:0.2);
 hold on;
 
@@ -324,7 +324,7 @@ p.LineWidth = 1.2;
 %p.Marker = "o";
 
 %标题坐标轴标注
-title("Profile in Three-dimensional space at   \omega = 6.283",'fontsize',16,'fontname','times new roman');
+title("Profile in Three-dimensional space at Anytime",'fontsize',16,'fontname','times new roman');
 xlabel('Z','fontname','times new roman');
 ylabel('Y','fontname','times new roman');
 zlabel('X','fontname','times new roman');
@@ -337,7 +337,7 @@ axis square;
 
 %function
 function dis=v_int_Sim(t1,t2,row,data)  %辛普森,t1,t2为积分区间，row为第几列
-    h=0.002;
+    h=0.001;
     dis=0;
     for t=t1:1:t2-2
         int_1=data(t,row);
@@ -348,7 +348,7 @@ function dis=v_int_Sim(t1,t2,row,data)  %辛普森,t1,t2为积分区间，row为第几列
 end
 
 function dis=v_int_tra(t1,t2,row,data)  %梯形法，t1,t2为积分区间，row为第几列
-    h=0.002;
+    h=0.001;
     dis=0;
     for t=t1:1:t2-1
         int_1=data(t,row);

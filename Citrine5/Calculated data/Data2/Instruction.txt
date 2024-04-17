@@ -1,4 +1,0 @@
-Period:			2s
-Amplitude:		0.2m
-Element gravity:	1.2
-Water Velocity:	0m/s
