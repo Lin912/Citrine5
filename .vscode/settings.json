@@ -7,5 +7,6 @@
     "C_Cpp.errorSquiggles": "enabled",
     "cmake.cmakePath": "D:/cmake-3.29.0-rc3-windows-x86_64/cmake-3.29.0-rc3-windows-x86_64/bin/cmake.exe",
     "cmake.sourceDirectory": "E:/Git/Citrine5/Citrine5",
+    "cmake.testExplorer.ctestPath": "E:/Git/Citrine5/Citrine5",
     "cmake.generator": "MinGW Makefiles"
 }

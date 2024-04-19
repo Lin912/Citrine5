@@ -41,3 +41,5 @@ We did a set of related pendant calculations based on the above theory and code,
 ![3](images/2D2%20slushing.jpg)
 ![5](images/2D%20slushing2.jpg)
 
+Change the file "setting.json" to rebuild the project.
+The line of CMake path, the CMake source path and the CMake test path.
