@@ -123,7 +123,7 @@ which are usually defined in the antecedent content.
 
 Specific definition of *Euler angle*:
 
-1.  Rotation around the *B-axis*($\Vec{Z}$) is defined by the $\phi$
+1.  Rotation around the *B-axis*($\vec{Z}$) is defined by the $\phi$
 
 2.  Rotation around the *N-axis*($\vec{Y}$) is defined by the $\theta$
 
@@ -520,14 +520,6 @@ $$R =
         cos \theta sin \phi & cos \phi& sin \phi sin \theta\\
         -sin \theta& 0& cos \theta\\
     \end{bmatrix}$$
-
-Our angular velocity $\omega$ is expressed as:
-
-$$\omega_{t} = -sin \theta \frac{\partial \phi}{\partial t}\\$$
-
-$$\omega_{n} = \frac{\partial \theta}{\partial t}\\$$
-
-$$\omega_{b} = cos \theta \frac{\partial \phi}{\partial t}\\$$
 
 ## Distributed forces
 
