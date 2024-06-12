@@ -14,17 +14,7 @@ ORCid (0000-0003-3820-3199) **[link](https://orcid.org/)**
 CleanVersion(VV)  <Top Vel to Bottom Vel>
 CleanVersion(VG)  <Top Vel to Bottom Gravity>
 
-## 1.0  Theory
-We base our assumptions on the following:
-(1)The Euler-Bernoulli beam theory is applied to each element of the selected elastic cable. 
-(2)The cross-section of the cable element remains homogeneous and round; 
-(3)The tension is a single-valued function of the strain.
-
-
-![1](images/Diagram.jpg)
-
-
-## 4.0   Fix external flow fields and add interfaces
+## 1.0   Fix external flow fields and add interfaces
 We realize the effect of the external flow on the motion of a flexible body cell by adding the Vel<1,2,3>
 
 ```
@@ -34,12 +24,9 @@ double V2 = brr[4];
 double V3 = brr[5];
 ```
 
-## 5.0 Results Showcase:
+## 2.0 Results Showcase:
 We did a set of related pendant calculations based on the above theory and code, and the specific distribution state and mechanical properties of the flexible body are shown below:
 
-![2](images/2D%20slushing1.jpg)
-![3](images/2D2%20slushing.jpg)
-![5](images/2D%20slushing2.jpg)
 
 Change the file "setting.json" to rebuild the project.
 The line of CMake path, the CMake source path and the CMake test path.
@@ -47,7 +34,7 @@ The line of CMake path, the CMake source path and the CMake test path.
 
 
 -------------------------------------------------------
-# Presumption
+# 3.0 Presumption
 
 First of all, we need to point out that the problem studied in this
 article is a structural dynamics problem of a continuum that satisfies
@@ -217,10 +204,6 @@ example, the first rotation around the axis is a rotation around the
 z-axis, the second rotation around the axis is a rotation around the
 y-axis, and the third rotation around the axis is still a rotation
 around the z-axis.
-
-![Coordinate rotation
-relationships](Picture/A2.png){#Coordinate rotation relationships
-width="12cm" height="8cm"}
 
 The order in which the axes are wound directly affects the exact form of
 the rotation matrix: for example, there is a big difference between the
@@ -406,12 +389,7 @@ length. Moreover, let $d_0$, $A$, $I$, and $I_p$ denote, respectively,
 the diameter, the cross-sectional area, the second moment, and the polar
 moment of the unstretched cable. The density of water, the density of
 cable, the modulus of elasticity, and the shear modulus are denoted by
-$\rho_w$, $\rho_c$, $E$, $G$, respectively. The balance of forces and
-moments is shown schematically in Figure
-[2](#Cable segment){reference-type="ref" reference="Cable segment"}
-
-![Cable segment](Picture/A1Mod.png){#Cable segment width="12cm"
-height="8cm"}
+$\rho_w$, $\rho_c$, $E$, $G$, respectively.
 
 All the variables are defined to the local Lagrangian coordinate system
 with the symbols $\vec{t}$, $\vec{n}$ and $\vec{b}$ respect denotes the
@@ -739,47 +717,4 @@ layer to obtain a steady-state solution that satisfies the computational
 residuals in that layer and then advanced to the next computational
 layer. By modifying the boundary conditions of different calculation
 layers, the motion and force of the cable under different external loads
-can be obtained. The solution process is shown in Fig 3.
-
-![Iteration](Picture/Iteration.png){#fig:Iteration width="50%"}
-
-## Difference matrix
-
-In the process of writing the program, in order to save the use of
-memory, we take the help of double-row form of data storage. For
-example, for variables in the same time layer, we use the superscripts
-new and old to differentiate them. For variables in the spatial layer,
-we differentiate them by subscripting 0 and 1, so that variables in both
-the spatial and temporal layers are represented at the same time.
-
-For $T_{0}^{old}$,we denote it as the ***0*** spatial layer ***old***
-time layer variable, for which $T_{0}^{new}$ is its ***new*** time layer
-variable in the same spatial layer, and $T_{1}^{old}$ is the next
-spatial layer variable in the same time layer, and for $T_{1}^{new}$ is
-the next spatial layer variable in the next time layer.
-
-Accordingly, we rewrite the *M*,*N* matrix and the *Q* vector. For *M*
-matrices, we notate them in four forms
-$M_{0}^{old}$,$M_{0}^{new}$,$M_{1}^{old}$ and $M_{1}^{new}$. where the
-variable names and matrix names are kept the same.
-
-At this point, the entire differential equation is written down as the
-following equation after going through the process of differencing and
-the process of matrixing:
-
-$$\begin{aligned}
-    F = (M^{i+1}_{k} + M^{i}_{k})(\frac{Y^{i+1}_{k} - Y^{i}_{k}}{\Delta t}) + (M^{i+1}_{k-1} + M^{i}_{k-1})(\frac{Y^{i+1}_{k-1} - Y^{i}_{k-1}}{\Delta t}) +
-    (N^{i+1}_{k-1} + N^{i+1}_{k-1})(\frac{Y^{i+1}_{k-1} - Y^{i+1}_{k-1}}{\Delta t})
-    + \\(N^{i}_{k-1} + N^{i}_{k-1})(\frac{Y^{i}_{k-1} - Y^{i}_{k-1}}{\Delta t}) + (Q^{i+1}_{k}+Q^{i+1}_{k-1}+Q^{i}_{k}+Q^{i}_{k-1}) = 0
-    \end{aligned}$$
-
-We then solve the entire matrix equation for the Jacobi matrix:
-
-$$\textit{J}_{k} = \frac{\partial F}{\partial Y_{k}^{i+1}}$$
-
-$$\textit{J}_{k-1} = \frac{\partial F}{\partial Y_{k-1}^{i+1}}$$
-
-Finally, Newton-Raphson iteration were used to compute the above
-difference matrix.
-
-# Appendix
+can be obtained.
