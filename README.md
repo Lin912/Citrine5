@@ -12,7 +12,9 @@ ORCid (0000-0003-3820-3199) **[link](https://orcid.org/)**
 ## Version(5.1.0)
 
 **Extended content:
+
 Version(VV)  <Top Vel & Bottom Vel>
+
 Version(VG)  <Top Vel & Bottom Forces>
 
 ## 1.0  Theory
