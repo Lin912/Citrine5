@@ -1,47 +1,47 @@
 # Citrine
+A Code for the simulate the dynamic characterics of cable
 
-Author's Information
 
+Author's Information:
 github Personal homepage: **https://github.com/Lin912**
-
 ORCid (0000-0003-3820-3199) **[link](https://orcid.org/)**
-
 
 
 ## Version(5.1.0)
 
 **Extended content:
-CleanVersion(VV)  <Top Vel to Bottom Vel>
-CleanVersion(VG)  <Top Vel to Bottom Gravity>
+Version(VV)  <Top Vel & Bottom Vel>
+Version(VG)  <Top Vel & Bottom Forces>
 
 ## 1.0  Theory
-We base our assumptions on the following:
-(1)The Euler-Bernoulli beam theory is applied to each element of the selected elastic cable. 
-(2)The cross-section of the cable element remains homogeneous and round; 
-(3)The tension is a single-valued function of the strain.
 
 
-![1](images/Diagram.jpg)
 
 
-## 4.0   Fix external flow fields and add interfaces
-We realize the effect of the external flow on the motion of a flexible body cell by adding the Vel<1,2,3>
 
-```
-Vel<1,2,3>
-double V1 = brr[3];            
-double V2 = brr[4];
-double V3 = brr[5];
-```
+## 2.0   Usage
+The code is written by the C++, before download the code you need:
+'''
+1. Prepare a compilable c++ environment. With download the GNU complier, like gcc, g++ etl;
+2. Download and install the Eigen library;
+3. Install Cmake and compile the source files according to CmakeLists in the Citrine5 folder.
+'''
+Running the Citrine5.exe and view the calculations result in the csv folder. The output.csv is the result file.
 
-## 5.0 Results Showcase:
+Then viewing the graphical results with using the code in Matlab folder, the PostProcess folder includes the Force and Profile result.
+
+Note: 
+1. Change the file "setting.json" to specify the path to the compiler.
+2. Specify the CMake source path and the CMake executable path.
+
+
+## 3.0 Showcase:
 We did a set of related pendant calculations based on the above theory and code, and the specific distribution state and mechanical properties of the flexible body are shown below:
 
 ![2](images/2D%20slushing1.jpg)
 ![3](images/2D2%20slushing.jpg)
 ![5](images/2D%20slushing2.jpg)
 
-Change the file "setting.json" to rebuild the project.
-The line of CMake path, the CMake source path and the CMake test path.
 
-haha
+## Copyrighte and Contact Me
+Email:  Z0802816@gmail.com
