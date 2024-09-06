@@ -40,9 +40,7 @@ We did a set of related pendant calculations based on the above theory and code,
 
 <div style="display: inline-block; text-align: center;">
   <img src="https://github.com/Lin912/Citrine5/blob/main/ResultShow/Experiment1.jpg" alt="Experment procedure 1" width="300"/>
-  <p>Experment procedure 1 </p>
   <img src="https://github.com/Lin912/Citrine5/blob/main/ResultShow/Experiment2.jpg" alt="Experment procedure 2" width="300"/>
-  <p>Experment procedure 2 </p>
 </div>
 
 
