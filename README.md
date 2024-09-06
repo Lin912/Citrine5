@@ -38,9 +38,13 @@ Note:
 ## 3.0 Showcase:
 We did a set of related pendant calculations based on the above theory and code, and the specific distribution state and mechanical properties of the flexible body are shown below:
 
-<div style="display: inline-block;">
-  <img src="https://github.com/Lin912/Citrine5/blob/main/ResultShow/Experiment1.jpg" alt="Experiment 1" width="500"/>
-  <img src="https://github.com/Lin912/Citrine5/blob/main/ResultShow/Experiment2.jpg" alt="Experiment 2" width="500"/>
+<div style="display: inline-block; text-align: center;">
+  <img src="https://github.com/Lin912/Citrine5/blob/main/ResultShow/Experiment1.jpg" alt="实验1: 结果分析" width="300"/>
+  <p>Experment procedure 1: </p>
+</div>
+<div style="display: inline-block; text-align: center; margin-left: 20px;">
+  <img src="https://github.com/Lin912/Citrine5/blob/main/ResultShow/Experiment2.jpg" alt="实验2: 结果分析" width="300"/>
+  <p>Experment procedure 2: </p>
 </div>
 
 
