@@ -38,9 +38,8 @@ Note:
 ## 3.0 Showcase:
 We did a set of related pendant calculations based on the above theory and code, and the specific distribution state and mechanical properties of the flexible body are shown below:
 
-![2](images/2D%20slushing1.jpg)
-![3](images/2D2%20slushing.jpg)
-![5](images/2D%20slushing2.jpg)
+![1](ResultShow/2D%20Experment1.jpg)
+![2](ResultShow/2D2%20Experment2.jpg)
 
 
 ## Copyrighte and Contact Me
