@@ -3,7 +3,9 @@ A Code for the simulate the dynamic characterics of cable
 
 
 Author's Information:
+
 github Personal homepage: **https://github.com/Lin912**
+
 ORCid (0000-0003-3820-3199) **[link](https://orcid.org/)**
 
 
