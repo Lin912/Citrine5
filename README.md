@@ -43,7 +43,5 @@ We did a set of related pendant calculations based on the above theory and code,
   <img src="https://github.com/Lin912/Citrine5/blob/main/ResultShow/Experiment2.jpg" alt="Experment procedure 2" width="300"/>
 </div>
 
-
-
 ## Copyrighte and Contact Me
 Email:  Z0802816@gmail.com
