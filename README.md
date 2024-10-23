@@ -23,7 +23,7 @@ Version(VG)  <Top Vel & Bottom Forces>
 
 
 
-## 2.0   Usage
+## 2.0   Usage process
 The code is written by the C++, before download the code you need:
 '''
 1. Prepare a compilable c++ environment. With download the GNU complier, like gcc, g++ etl;
@@ -47,5 +47,5 @@ We did a set of related pendant calculations based on the above theory and code,
   <img src="https://github.com/Lin912/Citrine5/blob/main/ResultShow/Experiment2.jpg" alt="Experment procedure 2" width="500"/>
 </div>
 
-## Copyrighte and Contact Me
+## Copyright && Contact Me
 Email:  Z0802816@gmail.com
