@@ -222,41 +222,92 @@ vector<double> FiberRO::ReadDelta()
 
 }
 
+
 VectorXd FiberRO::ReadTheLastRow(int index)
 {
+    Matrix<double, 500, 1> arrcol;  
+    VectorXd TransVal(TotNoV);  
 
-    Matrix<double,500,1> arrcol;
-    VectorXd TransVal(TotNoV);
-
-    ifstream infile(Outfile, ios::in);
+    ifstream infile(Outfile);  
     if (!infile)
     {
-      cout << "Open file " + Outfile + " failed" << endl;
-      exit(1);
+        cerr << "Open file " + Outfile + " failed" << endl;
+        exit(1);
     }
 
     string line;
-    string field;
-    for (int i = 0; i <=index; i++)
+   
+    for (int i = 0; i <= index; i++)
     {
-      getline(infile, line);
+        if (!getline(infile, line))
+        {
+            cerr << "Failed to read line " << i << " from file." << endl;
+            infile.close();
+            exit(1);
+        }
     }
+
     stringstream sin(line);
+    string field;
     int colindex = 0;
+    
     while (getline(sin, field, ','))
     {
-      double dvalue = atof(field.c_str());
-      arrcol(colindex, 0) = dvalue;
-      colindex++;
+        if (colindex >= 500) 
+        {
+            cerr << "Too many columns in the input line." << endl;
+            break;
+        }
+        double dvalue = stod(field);
+        arrcol(colindex, 0) = dvalue;
+        colindex++;
     }
     infile.close();
 
-    for(int i = 0; i < TotNoV; i++)
+    for (int i = 0; i < TotNoV; i++)
     {
-      TransVal(i) = arrcol[i];
+        TransVal(i) = arrcol(i, 0);
     }
     return TransVal;
 }
+
+
+
+//VectorXd FiberRO::ReadTheLastRow(int index)
+//{
+
+    // Matrix<double,500,1> arrcol;
+    // VectorXd TransVal(TotNoV);
+
+    // ifstream infile(Outfile, ios::in);
+    // if (!infile)
+    // {
+    //   cout << "Open file " + Outfile + " failed" << endl;
+    //   exit(1);
+    // }
+
+    // string line;
+    // string field;
+    // for (int i = 0; i <=index; i++)
+    // {
+    //   getline(infile, line);
+    // }
+    // stringstream sin(line);
+    // int colindex = 0;
+    // while (getline(sin, field, ','))
+    // {
+    //   double dvalue = atof(field.c_str());
+    //   arrcol(colindex, 0) = dvalue;
+    //   colindex++;
+    // }
+    // infile.close();
+
+    // for(int i = 0; i < TotNoV; i++)
+    // {
+    //   TransVal(i) = arrcol[i];
+    // }
+    // return TransVal;
+//}
 
 MatrixXd FiberRO::readCSV(int row) {
     ifstream infile(Outfile);
