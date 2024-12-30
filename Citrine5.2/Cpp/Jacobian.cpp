@@ -46,12 +46,9 @@ Jacobian::Jacobian(VectorXd& arr, VectorXd& brr, int index)
     Az = physicalData.Az;
 }
 
-Jacobian::~Jacobian()
-{
-    // cout << "Jacobian is read in !!" << endl; 
-}
+Jacobian::~Jacobian() {}
 
-SparseMatrix<double> Jacobian::jacobian(){
+SparseMatrix<double> Jacobian::jacobian() {
 
     SparseMatrix<double> temp(500, 500);
     double cosY6 = cos(Ynew(6)), cosY7 = cos(Ynew(7)), cosY496 = cos(Ynew(496)), cosY497 = cos(Ynew(497));

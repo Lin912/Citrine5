@@ -6,7 +6,7 @@ ParaReader::~ParaReader(){}
 PhysicalData ParaReader::ReadAllPhysicalData(FiberRO& a, int index)
 {
         PhysicalData data;
-        // 读取物理参数
+        
         auto physicalData = a.ReadPhysical();
         data.A = physicalData[0];
         data.rho = physicalData[1];
@@ -24,7 +24,6 @@ PhysicalData ParaReader::ReadAllPhysicalData(FiberRO& a, int index)
         data.Gy = physicalData[13];
         data.Gz = physicalData.back();
 
-        // 读取水和速度数据
         auto waterData = a.ReadWater(index);
         data.Vx = waterData[0];
         data.Vy = waterData[1];
@@ -44,7 +43,6 @@ PhysicalData ParaReader::ReadAllPhysicalData(FiberRO& a, int index)
         data.deltaT = deltaData[0];
         data.deltaS = deltaData[1];
 
-        // 读取底部加速度
         auto bottomG = a.ReadBottomG();
         data.Gbx = bottomG[0];
         data.Gby = bottomG[1];

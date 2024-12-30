@@ -33,7 +33,7 @@ class MNQ
 
 
     public:
-        MNQ(Eigen::VectorXd& arr, Eigen::VectorXd& brr, int index);
+        MNQ(const Eigen::VectorXd& arr, const Eigen::VectorXd& brr, int index);
         ~MNQ();
 
         void savetxt(Eigen::MatrixXd mat, string filename);

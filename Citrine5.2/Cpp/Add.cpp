@@ -1,32 +1,10 @@
 #include "../Head/Add.h"
 
-Add::Add(VectorXd &arr, VectorXd &brr, int index)
+Add::Add(const VectorXd &arr, const VectorXd &brr, int index):Yold(arr), Ynew(brr)
 {
-    Yold = arr;
-    Ynew = brr;
 
     FiberRO a;
     PhysicalData physicalData = ParaReader::ReadAllPhysicalData(a, index);
-    A = physicalData.A;
-    rho = physicalData.rho;
-    d0 = physicalData.d0;
-    E = physicalData.E;
-    I = physicalData.I;
-    M = physicalData.M;
-    ma = physicalData.ma;
-    Cdt = physicalData.Cdt;
-    Cdn = physicalData.Cdn;
-    Cdb = physicalData.Cdb;
-    pi = physicalData.pi;
-    g = physicalData.g;
-    Gx = physicalData.Gx;
-    Gy = physicalData.Gy;
-    Gz = physicalData.Gz;
-
-    Vx = physicalData.Vx;
-    Vy = physicalData.Vy;
-    Vz = physicalData.Vz;
-
     Vtx = physicalData.Vtx;
     Vty = physicalData.Vty;
     Vtz = physicalData.Vtz;
@@ -34,16 +12,6 @@ Add::Add(VectorXd &arr, VectorXd &brr, int index)
     Vbx = physicalData.Vbx;
     Vby = physicalData.Vby;
     Vbz = physicalData.Vbz;
-
-    deltaT = physicalData.deltaT;
-    deltaS = physicalData.deltaS;
-
-    Gbx = physicalData.Gbx;
-    Gby = physicalData.Gby;
-    Gbz = physicalData.Gbz;
-    Ax = physicalData.Ax;
-    Ay = physicalData.Ay;
-    Az = physicalData.Az;
 }
 
 Add::~Add() {}

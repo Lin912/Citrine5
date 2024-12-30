@@ -1,16 +1,9 @@
 #include <iostream>
 #include "../Head/BC.h"
 
-BC::BC(Eigen::VectorXd &arr, Eigen::VectorXd &brr)
-{
-    Yold = arr;
-    Ynew = brr;
-}
+BC::BC(const Eigen::VectorXd &arr, const Eigen::VectorXd &brr):Yold(arr), Ynew(brr) {}
 
-BC::~BC()
-{
-    // std::cout << "Boundary condition is Loaded!" << std::endl;
-}
+BC::~BC() {}
 
 Eigen::VectorXd BC::process(Eigen::VectorXd &Y)
 {

@@ -1,27 +1,22 @@
-#include <iostream>
-#include <cmath>
-#include <Eigen/Dense>
 #include "../Head/Load.h"
+#include <Eigen/Dense>
+#include <cmath>
+#include <iostream>
+#include <spdlog/spdlog.h>
 
-Load::Load(VectorXd& arr, VectorXd& brr)
-{
-    Yold = arr;
-    Ynew = brr;
+
+Load::Load(const VectorXd &arr, const VectorXd &brr) : Yold(arr), Ynew(brr) {}
+
+Load::~Load() {}
+
+VectorXd Load::LF(int k) {
+  SPDLOG_DEBUG("Calculating LF for index {}", k);
+  Fx A(Yold, Ynew, k);
+  return A.fx();
 }
 
-Load::~Load()
-{
-    // cout << "Load done! Time to get Iteration !!" << endl;
-}
-
-VectorXd Load::LF(int k)
-{
-    Fx A(Yold, Ynew, k);
-    return A.fx();
-}
-
-MatrixXd Load::LJ(int k)
-{
-    Jacobian A(Yold, Ynew, k);
-    return A.jacobian();   
+MatrixXd Load::LJ(int k) {
+  SPDLOG_DEBUG("Calculating LJ for index {}", k);
+  Jacobian A(Yold, Ynew, k);
+  return A.jacobian();
 }

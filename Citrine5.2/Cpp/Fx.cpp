@@ -79,16 +79,16 @@ VectorXd Fx::fx() {
         Mnew[i] = Eigen::SparseMatrix<double>(length, length);    
     
         // 将子矩阵的非零元素插入到新矩阵中
-        for (int k = startIdx; k < startIdx + length; ++k) {
-            for (Eigen::SparseMatrix<double>::InnerIterator it(AA.Mold(), k); it; ++it) {
+        for (int kold = startIdx; kold < startIdx + length; ++kold) {
+            for (Eigen::SparseMatrix<double>::InnerIterator it(AA.Mold(), kold); it; ++it) {
                 if (it.row() >= startIdx && it.row() < startIdx + length && it.col() >= startIdx && it.col() < startIdx + length) {
                     Mold[i].coeffRef(it.row() - startIdx, it.col() - startIdx) = it.value();
                 }
             }   
         }
         // 对 Mnew 做相同操作
-        for (int k = startIdx; k < startIdx + length; ++k) {
-            for (Eigen::SparseMatrix<double>::InnerIterator it(AA.Mnew(), k); it; ++it) {
+        for (int knew = startIdx; knew < startIdx + length; ++knew) {
+            for (Eigen::SparseMatrix<double>::InnerIterator it(AA.Mnew(), knew); it; ++it) {
                 if (it.row() >= startIdx && it.row() < startIdx + length && it.col() >= startIdx && it.col() < startIdx + length) {
                     Mnew[i].coeffRef(it.row() - startIdx, it.col() - startIdx) = it.value();
                 }
@@ -109,8 +109,8 @@ VectorXd Fx::fx() {
         Nnew[i] = Eigen::SparseMatrix<double>(length, length);
 
         // 通过遍历 Nold 提取块
-        for (int k = startIdx; k < startIdx + length; ++k) {
-            for (Eigen::SparseMatrix<double>::InnerIterator it(AA.Nold(), k); it; ++it) {
+        for (int knold = startIdx; knold < startIdx + length; ++knold) {
+            for (Eigen::SparseMatrix<double>::InnerIterator it(AA.Nold(), knold); it; ++it) {
                 if (it.row() >= startIdx && it.row() < startIdx + length && it.col() >= startIdx && it.col() < startIdx + length) {
                     Nold[i].coeffRef(it.row() - startIdx, it.col() - startIdx) = it.value();
                 }
@@ -118,8 +118,8 @@ VectorXd Fx::fx() {
         }
 
         // 通过遍历 Nnew 提取块
-        for (int k = startIdx; k < startIdx + length; ++k) {
-            for (Eigen::SparseMatrix<double>::InnerIterator it(AA.Nnew(), k); it; ++it) {
+        for (int knnew = startIdx; knnew < startIdx + length; ++knnew) {
+            for (Eigen::SparseMatrix<double>::InnerIterator it(AA.Nnew(), knnew); it; ++it) {
                 if (it.row() >= startIdx && it.row() < startIdx + length && it.col() >= startIdx && it.col() < startIdx + length) {
                     Nnew[i].coeffRef(it.row() - startIdx, it.col() - startIdx) = it.value();
                 }

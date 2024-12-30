@@ -16,7 +16,7 @@ private:
 
 
 public:
-    Load(VectorXd& arr, VectorXd& brr);
+    Load(const VectorXd& arr, const VectorXd& brr);
     ~Load();
 
     VectorXd LF(int k);

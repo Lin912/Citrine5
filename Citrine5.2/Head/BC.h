@@ -9,7 +9,7 @@ private:
     Eigen::VectorXd process(Eigen::VectorXd &Y);
 
 public:
-    BC(Eigen::VectorXd &arr, Eigen::VectorXd &brr);
+    BC(const Eigen::VectorXd &arr, const Eigen::VectorXd &brr);
     ~BC();
 
     Eigen::VectorXd yold();

@@ -29,7 +29,6 @@ class Jacobian
 
         double M;
         double ma;
-        double w0;
         double Cdt;
         double Cdn;
         double Cdb;

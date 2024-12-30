@@ -67,7 +67,7 @@ class FiberRO
         vector<double> ReadPhysical();
         
 
-        void Output(MatrixXd &arr, int rr, int ll);
+        void Output(const MatrixXd &arr, int rr, int ll);
         double flutov(char* filename);
 
         vector<double> ReadDelta();
