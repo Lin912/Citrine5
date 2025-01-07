@@ -9,13 +9,20 @@ github Personal homepage: **https://github.com/Lin912**
 ORCid (0000-0003-3820-3199) **[link](https://orcid.org/)**
 
 
-## Version(5.1.0)
+## NewRelease Version(5.2)
 
-**Extended content:
+**content:
+For linux Server we release the Citrine 5.2. This code used for calculate the dynamic behaivor of cable.
+In Citrine 5.2, the Porocess Folder contains the PreProcess and PostProcess that include the Jacabian Matrix 
+calculation procedure, Data Processing and Plotting part. Then, the folder ForceBoundary and VelocityBoundary:
 
-Version(VV)  <Top Vel & Bottom Vel>
+(ForceBoundary)  <Top Vel & Bottom Forces>
 
-Version(VG)  <Top Vel & Bottom Forces>
+(VelocityBoundary)  <Top Vel & Bottom Vel>
+
+
+
+
 
 ## 1.0  Theory
 
